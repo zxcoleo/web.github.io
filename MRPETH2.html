@@ -1,0 +1,2524 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+   <!-- TOKEN -->
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>MRPETH | The #1 MRPETH</title>
+      <!-- Incluir web3.js desde un CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+      <link rel="stylesheet" href="cps/MRPETH/interfaz.css">
+      <link rel="stylesheet" href="assets/interfaz/css/style.css">
+      <link rel="stylesheet" href="assets/interfaz/css/stylepro.css">
+      <link rel="icon" type="image/x-icon" href="assets/interfaz/MRPETH/favicon.png">
+      <script>
+         document.addEventListener('contextmenu', function(e) {
+             e.preventDefault();
+         });
+     </script>
+   </head>
+
+   <body>
+</div>
+    <img src="cps/MRPETH/logo.png" alt="Left Image" class="side-image">
+   <!----><!---->
+         <!----><!---->
+         <div class="purchase-interface">
+   <div class="purchase-interface">
+      <div _ngcontent-ng-c499713394="" class="walletBox" bis_skin_checked="1">
+         <div _ngcontent-ng-c499713394="" class="px-3 pt-3 w-100 d-flex flex-column align-items-center justify-content-start text-center" bis_skin_checked="1">
+            <div class="titleone text-white fw-bold">
+                <p id="titleone">MRPETH</p>
+                <img class="titleoneicon" src="assets/interfaz/images/interfaz/verified.png" width="25" height="25">
+            </div>            
+            <!----><!---->
+            <div class="d-flex align-items-center justify-content-center gap-2 fw-regular counter">
+       <div class="rounded-3 time-card text-center d-flex" id="days">
+          <div class="value">5</div>
+          <div translate="" class="indicator">Days</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="hours">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Hours</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="minutes">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Minutes</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="seconds">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Seconds</div>
+       </div>
+    </div>
+            <div _ngcontent-ng-c499713394="" data-percent="0" class="progress ng-star-inserted" bis_skin_checked="1">
+               <div _ngcontent-ng-c499713394="" class="bar" style="width: 92%;" bis_skin_checked="1"></div>
+            </div>
+            <span class="tradingtext">When the progress bar reaches 100% ​trading will start within 24 hours after.</span>
+            <!---->
+            <div class="mb-2 mt-3 font-14 d-flex justify-content-between w-100">
+               <span class="fw-semibold text-white">USDT Raised:</span>
+               <div>
+                 <span id="usdt-raised" class="fw-regular text-white fw-bold">Usdt Raised Mount</span>
+                 <span class="fw-regular text-white fw-bold"></span>
+               </div>
+             </div>
+            <div _ngcontent-ng-c499713394="" class="d-flex justify-content-between align-items-center text-center mb-2 font-14 w-100">
+               <span _ngcontent-ng-c499713394="" class="fw-semibold text-white">Your purchased $MRPETH :</span>
+               <div _ngcontent-ng-c499713394="" bis_skin_checked="1"><span _ngcontent-ng-c499713394="" class="text-white fw-bold"> <span id="purchasedTokens">0</span><img _ngcontent-ng-c499713394="" src="images/info-icon.svg" alt="" class="img-fluid ms-2 cursor-pointer"></div>
+            </div>
+            <div _ngcontent-ng-c499713394="" class="d-flex justify-content-between align-items-center text-center font-14 w-100 mb-3" bis_skin_checked="1">
+               <span _ngcontent-ng-c499713394="" class="fw-semibold text-white">Your stakeable $MRPETH :</span>
+               <div _ngcontent-ng-c499713394="" bis_skin_checked="1"><span _ngcontent-ng-c499713394="" class="fw-bold text-white">0</span><img _ngcontent-ng-c499713394="" src="images/info-icon.svg" alt="" class="img-fluid ms-2 cursor-pointer"></div>
+            </div>
+         </div>
+         <div _ngcontent-ng-c499713394="" class="px-3 mb-3 mt-3 swapArea text-white ng-star-inserted" bis_skin_checked="1">
+            <p _ngcontent-ng-c499713394="" class="text-center mb-3 dashTitle text-white fw-semibold"> 1 $MRPETH = $0.0000297 </p>
+            <div class="tab-container gap-2" bis_skin_checked="1">
+               <!---->
+               <button id="bnbButton" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-5" onclick="selectTab(this)">
+                  <img src="assets/interfaz/images/interfaz/bnb.png" height="25" alt="BNB">
+                  <span class="ps-2 fw-bold text-white">BNB</span>
+              </button>
+              <button id="ethButton" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-5" style="display: none;" onclick="selectTab(this)">
+               <img src="assets/interfaz/images/interfaz/eth.png" height="25" alt="ETH">
+               <span class="ps-2 fw-bold text-white">ETH</span>
+           </button>
+              <button id="usdtButton" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-5" onclick="selectTab(this)">
+                  <img src="assets/interfaz/images/interfaz/usdt.png" height="25" alt="USDT">
+                  <span class="ps-2 fw-bold text-white">USDT</span>
+              </button>
+              <button id="usdcButton" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-5" onclick="selectTab(this)">
+                  <img src="assets/interfaz/images/interfaz/usdc.png" height="25" alt="USDC">
+                  <span class="ps-2 fw-bold text-white">USDC</span>
+              </button>
+           </div>
+            <app-swap _ngcontent-ng-c499713394="" _nghost-ng-c3760924603="">
+               <div _ngcontent-ng-c3760924603="" class="swapSection mt-3 mb-2" bis_skin_checked="1">
+                  <!----><!---->
+                  <div class="body-section mt-2">
+                     <div class="row my-2">
+                         <div class="col-md-6 pe-md-2">
+                             <div class="d-flex align-items-center justify-content-between mb-2">
+                                 <label class="d-block font-13 fw-semibold">BNB you pay</label>
+                                 <div class="fw-bold text-light-grey cursor-pointer font-13 text-uppercase">Max</div>
+                             </div>
+                             <div class="amountField d-flex align-items-start">
+                              <input type="text" id="bnbInput" class="form-control text-truncate ng-valid ng-dirty ng-touched rounded-5" style="background-color: rgba(0, 0, 0, 0.754321);">
+                              <div class="amountType">
+                                <img src="assets/interfaz/images/interfaz/bnb.png" alt="ETH icon" width="28" height="28">
+                              </div>
+                            </div>
+                         </div>
+                         <div class="col-md-6 ps-md-2 mt-3 mt-md-0">
+                             <div class="d-flex align-items-center justify-content-between mb-2">
+                                 <label class="d-block font-13 fw-semibold text-truncate">$MRPETH you receive</label>
+                             </div>
+                             <div class="amountField">
+                                 <input type="text" id="tokenInput" class="form-control text-truncate ng-untouched ng-pristine ng-valid rounded-5" style="background-color: rgba(0, 0, 0, 0.754321);" onclick="comprarTokens()">
+                                 <div class="amountType">
+                                     <img src="cps/MRPETH/favicon.png" alt="Token icon" width="28" height="28">
+                                 </div>
+                             </div>
+                         </div>
+
+
+
+                        <div _ngcontent-ng-c3760924603="" class="col-12 text-center" bis_skin_checked="1">
+                           <!----><!----><!----><!----><!---->
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <!----><!----><!----><!----><!----><!----><!---->
+               </div>
+            </app-swap>
+            <div _ngcontent-ng-c499713394="" class="d-flex align-items-center justify-content-center gap-2 mt-4 ng-star-inserted" bis_skin_checked="1">
+               <button id="connectwalletBtn" class="btn btn-primary px-0 fw-bold w-100 ng-star-inserted rounded-5" style="background-color: rgba(0, 0, 0, 0.754321);">
+                  <span id="connectwalletBtnText" translate="">Connect Wallet</span>
+              </button>
+              <button id="buynowBtn" class="btn btn-primary px-0 fw-bold w-100 ng-star-inserted rounded-5" style="display: none;" onclick="handleBuyNowClick()">
+               <span id="buynowBtnText" translate="">BUY NOW</span>
+           </button>        
+              <!----><!---->
+              <button id="buywithEthButton" class="btn btn-outline-tertiary fw-bold w-100 px-2" style="display: none;">
+               <span>Buy with ETH</span>
+             </button>
+               <button id="buywithBnbButton" class="btn btn-outline-tertiary fw-bold w-100 px-2" style="display: none;">
+                  <span>Buy with BNB</span>
+                </button>
+                <button id="walletconnect" class="btn btn-outline-tertiary fw-bold w-100 px-2 font-10 rounded-5">
+                  <span id="connectedAddress">You're chosen! Spend $25+ now to get 15 USDT + 1 NFT in your wallet automatically. Don't miss out! 🔥</span>
+                </button>
+            </div>
+            <!---->
+            <div _ngcontent-ng-c499713394="" class="mt-3" bis_skin_checked="1">
+               <p _ngcontent-ng-c499713394="" class="font-13 text-center mb-1">
+                  <!---->
+               </p>
+               <p _ngcontent-ng-c499713394="" translate="" class="font-14 text-center fw-semibold text-white mb-1">Powered by <a _ngcontent-ng-c499713394="" href="https://web3paymentsolutions.io/" target="_blank" bis_skin_checked="1"><img _ngcontent-ng-c499713394="" src="assets/interfaz/images/interfaz/web3.png" alt="web3paymentsolutions" class="poweredByIcon text-tertiary"></a></p>
+            </div>
+         </div>
+         <!---->
+      </div>
+   </div>
+
+
+   <!-- Mirrored  -->
+
+   <div id="hiddenContent" class="hidden-container">
+    <div role="document" focustrap="" class="modal-dialog modal-dialog-centered modal-min">
+        <div class="modal-content">
+            <div class="p-4 connect">
+                <div class="d-flex justify-content-between align-items-center ng-star-inserted">
+                    <div></div>
+                    <h4 translate="" class="text-center fw-semibold fs-5 m-0 text-white text-capitalize">Choose a payment method</h4>
+                    <svg-icon id="closeModalBtn" src="/assets/images/svg-icons/close-white.svg" class="cursor-pointer">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="12.6 12.6 14.8 14.8" enable-background="new 12.6 12.6 14.8 14.8" xml:space="preserve" aria-hidden="true" style="width: 14px; height: 14px;">
+                            <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" d="M26,14L14,26 M14,14l12,12"></path>
+                        </svg>
+                    </svg-icon>
+                </div>
+                <hr style="margin: 10px 0;">
+                <button type="metamaskConnect" class="btn btn-sm border-1 rounded-5 bg-primary py-2 px-3 btn-light w-100 d-flex justify-content-between align-items-center mb-3 btnMetamask" onclick="connectMetamask()">
+                    <span translate="" class="d-inline-block text-black text-white">Metamask</span>
+                    <img src="assets/interfaz/images/interfaz 2/metamask.png" height="32" width="32" alt="">
+                </button>
+                <button type="button" class="btn btn-sm border-1 rounded-5 bg-primary py-2 px-3 btn-light w-100 d-flex justify-content-between align-items-center mb-3 btnDirectPayment" id="openDirectPaymentModal">
+                    <span translate="" class="d-inline-block text-black text-white">Direct Payment</span>
+                    <img src="assets/interfaz/images/interfaz 2/ethereum.png" height="32" width="32" alt="">
+                </button>
+               <button type="button" class="btn btn-sm border-1 rounded-5 bg-primary py-2 px-3 btn-light w-100 d-flex justify-content-between align-items-center mb-3 btnSolanaWallet" id="openSolanaModal">
+                  <span translate="" class="d-inline-block text-black text-white">Solana</span>
+                  <img src="assets/interfaz/images/interfaz 2/solana.png" height="32" width="32" alt="">
+               </button>
+               <button type="button" class="btn btn-sm border-1 rounded-5 bg-primary py-2 px-3 btn-light w-100 d-flex justify-content-between align-items-center mb-3 btnSolanaWallet" id="openDogecoinModal">
+                <span translate="" class="d-inline-block text-black text-white">Dogecoin</span>
+                <img src="assets/interfaz/images/interfaz 2/dogecoin.png" height="32" width="32" alt="">
+             </button>
+             <button type="button" class="btn btn-sm border-1 rounded-5 bg-primary py-2 px-3 btn-light w-100 d-flex justify-content-between align-items-center mb-3 btnSolanaWallet" id="openAllWalletsModal">
+                <span translate="" class="d-inline-block text-black text-white">All Wallets</span>
+                <img src="assets/interfaz/images/interfaz 2/Browser Wallet.webp" height="32" width="32" alt="">
+             </button>
+               <button class="btn btn-clear w-100 d-flex justify-content-center align-items-center aniBtn btnNoWallet">
+                  <span translate="" class="d-inline-block text-white text-white">I don’t have a wallet</span>
+                  <img src="assets/interfaz/images/interfaz 2/dontwallet.png" height="20" width="17" alt="">
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <!-- Modal for Wallet Connect -->
+   <div id="directpaymentbtn" role="document" focustrap="" class="modal-dialog modal-dialog-centered modal-min" style="display: none;">
+    <div class="modal-content">
+        <div class="p-4 connect">
+            <div class="d-flex justify-content-between align-items-center ng-star-inserted">
+                <div></div>
+                <h4 translate="" class="text-center fw-semibold fs-5 m-0 text-white text-capitalize">Direct Paymet 🔒</h4>
+                <svg-icon id="closeModalBtn" src="/assets/images/svg-icons/close-white.svg" class="cursor-pointer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="12.6 12.6 14.8 14.8" enable-background="new 12.6 12.6 14.8 14.8" xml:space="preserve" aria-hidden="true" style="width: 14px; height: 14px;">
+                        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" d="M26,14L14,26 M14,14l12,12"></path>
+                    </svg>
+                </svg-icon>
+            </div>
+            <div class="tab-container gap-2" bis_skin_checked="1">
+            </div>
+            <div style="margin-top: 20px;"></div>
+            <img class="qr-code" src="assets/interfaz/images/qr/ethereumqr.png" height="270" width="270" alt="QR Code">
+            <div class="iconmodal-container">
+            <button id="bnbmodalicon" class="btn">
+                <img src="assets/interfaz/images/interfaz/bnb.png" height="25" alt="BNB">
+                <span>BNB</span>
+            </button>
+            <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz/eth.png" height="25" alt="ETH">
+                <span>ETH</span>
+            </button>
+            <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz/usdt.png" height="25" alt="USDT">
+                <span>USDT</span>
+            </button>
+            <button id="iconmodal" class="btn">
+               <img src="assets/interfaz/images/interfaz/usdc.png" height="25" alt="USDT">
+               <span>USDC</span>
+           </button>
+        </div>
+            <div class="container">
+               <p id="direccion-1">0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5</p>
+               <img class="copy-icon" src="assets/interfaz/images/interfaz 2/copiar.png" onclick="copiarDireccion()" alt="Copiar" width="15" height="15">
+               <span class="copied-text" id="copiedText">Copied</span>
+            </div>
+            <p class="descripcion">When you send funds to the presale wallet above, you will automatically receive the coins into your wallet after the transaction is confirmed. 🔒</p>
+            <p class="descripcion">It is used to receive tokens on Ethereum, BSC, Base, Avalanche, Arbitrum, Polygon, Optimism, and other compatible networks.</p>
+        </div>
+        <div class="iconmodal-container" style="margin-top: -30px;">
+            <button id="bnbmodalicon" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/ethereum.png" height="25" alt="BNB">
+                <span></span>
+            </button>
+            <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/bnb.png" height="25" alt="ETH">
+                <span></span>
+            </button>
+            <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/base.png" height="25" alt="USDT">
+                <span></span>
+            </button>
+            <button id="iconmodal" class="btn">
+               <img src="assets/interfaz/images/interfaz 2/avax.png" height="25" alt="USDT">
+               <span></span>
+               <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/arbitrum.png" height="25" alt="ETH">
+                <span></span>
+            </button>
+            <button id="iconmodal" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/polygon.png" height="25" alt="USDT">
+                <span></span>
+            </button>
+            <button id="iconmodal" class="btn">
+               <img src="assets/interfaz/images/interfaz 2/optimism.png" height="25" alt="USDT">
+               <span></span>
+           </button>
+        </div>        
+      </div>
+   </div>
+
+   <div id="solanawalletbtn" role="document" focustrap="" class="modal-dialog modal-dialog-centered modal-min" style="display: none;">
+    <div class="modal-content">
+        <div class="p-4 connect">
+            <div class="d-flex justify-content-between align-items-center ng-star-inserted">
+                <div></div>
+                <h4 translate="" class="text-center fw-semibold fs-5 m-0 text-white text-capitalize">Solana 🔒</h4>
+                <svg-icon id="closeModalBtn" src="/assets/images/svg-icons/close-white.svg" class="cursor-pointer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="12.6 12.6 14.8 14.8" enable-background="new 12.6 12.6 14.8 14.8" xml:space="preserve" aria-hidden="true" style="width: 14px; height: 14px;">
+                        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" d="M26,14L14,26 M14,14l12,12"></path>
+                    </svg>
+                </svg-icon>
+            </div>
+            <div class="tab-container gap-2" bis_skin_checked="1">
+           </div>
+           <div style="margin-top: 20px;"></div>
+           <img class="qr-code" src="assets/interfaz/images/qr/solanaqr.png" height="270" width="270" alt="QR Code">
+           <div class="iconmodal-container">
+            <button id="bnbmodalicon" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/solana.png" height="25" alt="BNB">
+                <span>SOL</span>
+            </button>
+        </div>
+        <div class="container">
+            <p id="direccion-2">G7drKnQ1hR9xr8njpB76W16Hbwet5SXAY6hmGpS4wVua</p>
+            <img class="copy-icon" src="assets/interfaz/images/interfaz 2/copiar.png" onclick="copiarDireccion()" alt="Copiar" width="15" height="15">
+            <span class="copied-text" id="copiedText">Copied</span>
+         </div>
+            <p class="descripcion">When you send funds to the presale wallet above, you will automatically receive the coins into your wallet after the transaction is confirmed. 🔒</p>
+            <p class="descripcion">In Solana, it is used to receive tokens.</p>
+        </div>        
+      </div>
+   </div>
+
+   <div id="dogecoinwalletbtn" role="document" focustrap="" class="modal-dialog modal-dialog-centered modal-min" style="display: none;">
+    <div class="modal-content">
+        <div class="p-4 connect">
+            <div class="d-flex justify-content-between align-items-center ng-star-inserted">
+                <div></div>
+                <h4 translate="" class="text-center fw-semibold fs-5 m-0 text-white text-capitalize">Dogecoin 🔒</h4>
+                <svg-icon id="closeModalBtn" src="/assets/images/svg-icons/close-white.svg" class="cursor-pointer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="12.6 12.6 14.8 14.8" enable-background="new 12.6 12.6 14.8 14.8" xml:space="preserve" aria-hidden="true" style="width: 14px; height: 14px;">
+                        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" d="M26,14L14,26 M14,14l12,12"></path>
+                    </svg>
+                </svg-icon>
+            </div>
+            <div class="tab-container gap-2" bis_skin_checked="1">
+           </div>
+           <div style="margin-top: 20px;"></div>
+           <img class="qr-code" src="assets/interfaz/images/qr/dogecoinqr.png" height="270" width="270" alt="QR Code">
+           <div class="iconmodal-container">
+            <button id="bnbmodalicon" class="btn">
+                <img src="assets/interfaz/images/interfaz 2/dogecoin.png" height="25" alt="BNB">
+                <span>DOGE</span>
+            </button>
+        </div>
+            <div class="container">
+               <p id="direccion-3">D8K9yqgYHAcbdCNZmDErxkUFrVBXGCqUgm</p>
+               <img class="copy-icon" src="assets/interfaz/images/interfaz 2/copiar.png" onclick="copiarDireccion()" alt="Copiar" width="15" height="15">
+               <span class="copied-text" id="copiedText">Copied</span>
+            </div>
+            <p class="descripcion">When you send funds to the presale wallet above, you will automatically receive the coins into your wallet after the transaction is confirmed. 🔒</p>
+            <p class="descripcion">It is only used to receive Dogecoin.</p>
+        </div>        
+    </div>
+ </div>
+
+ <div id="allwalletsbtn" role="document" focustrap="" class="modal-dialog modal-dialog-centered modal-min" style="display: none;">
+    <div class="modal-content">
+        <div class="p-4 connect">
+            <div class="d-flex justify-content-between align-items-center ng-star-inserted">
+                <div></div>
+                <h4 translate="" class="text-center fw-semibold fs-5 m-0 text-white text-capitalize">All Wallets 🔒</h4>
+                <svg-icon id="closeModalBtn" src="/assets/images/svg-icons/close-white.svg" class="cursor-pointer">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="12.6 12.6 14.8 14.8" enable-background="new 12.6 12.6 14.8 14.8" xml:space="preserve" aria-hidden="true" style="width: 14px; height: 14px;">
+                        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" d="M26,14L14,26 M14,14l12,12"></path>
+                    </svg>
+                </svg-icon>
+            </div>
+            <div style="margin-top: 20px;"></div>
+            <input type="text" id="searchInput" placeholder="Search">
+            <div style="margin-top: 20px;"></div>
+            <div style="position: relative;">
+                <img id="qrImage" class="qr-code" src="" height="270" width="270" alt="QR Code" style="display: none;">
+                <img id="iconImage" class="qr-code" src="" height="25" alt="Selected Wallet Icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;">
+            </div>
+            <div class="button-grid">
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/91d5d6e5-de11-45de-9d98-18b74ac8e557.webp" height="25" alt="MetaMask">
+                    <span class="textwallet">MetaMask</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/03184aa6-2015-45e3-87ff-79aa647aec87.webp" height="25" alt="Coinbase Wallet">
+                    <span class="textwallet">Coinbase Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a54f41f4-b8a7-4fa8-9071-da013f8bc184.webp" height="25" alt="Trust Wallet">
+                    <span class="textwallet">Trust Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/31ef6923-bdc0-4b1c-ba17-4273b084a49b.webp" height="25" alt="Safe">
+                    <span class="textwallet">Safe</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/cc5c045d-618e-45e9-be40-8ef45692205f.webp" height="25" alt="Rainbow">
+                    <span class="textwallet">Rainbow</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/09911b35-7bad-48c2-b481-d0ca92309876.webp" height="25" alt="Uniswap Wallet">
+                    <span class="textwallet">Uniswap Wallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b019b853-2046-4a84-9584-ad10a81d1cea.webp" height="25" alt="Zerion">
+                    <span class="textwallet">Zerion</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/33bd17c5-32a1-4f2c-a75c-d3174a6f3942.webp" height="25" alt="imToken">
+                    <span class="textwallet">imToken</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/15a28a6b-ae65-48aa-a237-1954fe297227.webp" height="25" alt="Argent">
+                    <span class="textwallet">Argent</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4ec83d62-310c-4120-b7bb-b7f57cba776b.webp" height="25" alt="Bitget Wallet">
+                    <span class="textwallet">Bitget Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6d2b85be-0031-430e-8381-ef33d1ea0387.webp" height="25" alt="Crypto.com | DeFi Wallet">
+                    <span class="textwallet">Crypto.com | DeFi Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/88a7a214-48b1-4630-8bae-acb0b436624a.webp" height="25" alt="OKX Wallet">
+                    <span class="textwallet">OKX Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fe656d85-cdd0-48b1-b58c-8181a07119e0.webp" height="25" alt="TokenPocket">
+                    <span class="textwallet">TokenPocket</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5214dd64-fbdf-4475-a6f8-77a33aa4f43a.webp" height="25" alt="Robinhood Wallet">
+                    <span class="textwallet">Robinhood Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/611ad2c5-2347-4cf5-b64f-a4eb5d9288cf.webp" height="25" alt="Frontier">
+                    <span class="textwallet">Frontier</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a301e0db-68e0-4396-af47-fc769b785d81.webp" height="25" alt="Blockchain.com">
+                    <span class="textwallet">Blockchain.com</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4f07112b-f7a3-4af3-8c1b-31f5ea90b5aa.webp" height="25" alt="SafePal">
+                    <span class="textwallet">SafePal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/35ffb456-e3fc-41cd-a83e-794b5767b768.webp" height="25" alt="Omni">
+                    <span class="textwallet">Omni</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/045d2257-6d17-474c-9f23-3b3d8a9ed199.webp" height="25" alt="Zengo Wallet">
+                    <span class="textwallet">Zengo Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/292aa610-17d8-4c21-93ef-1b635f8d0036.webp" height="25" alt="1inch Wallet">
+                    <span class="textwallet">1inch Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/aa67554a-913e-4cfc-aa58-1ac4ed9e0021.webp" height="25" alt="Binance Web3 Wallet">
+                    <span class="textwallet">Binance Web3 Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b2aead91-e701-4dce-b181-5eb9f57a8df0.webp" height="25" alt="Exodus">
+                    <span class="textwallet">Exodus</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/74eec5a7-fee9-4a75-9e6f-0743b67fc6b9.webp" height="25" alt="Ledger Live">
+                    <span class="textwallet">Ledger Live</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a94814be-e307-493e-9052-383fd51b08c5.webp" height="25" alt="MEW wallet">
+                    <span class="textwallet">MEW wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6e4a1a69-c2e2-4061-9052-6d795c89ac1b.webp" height="25" alt="AlphaWallet">
+                    <span class="textwallet">AlphaWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1cd49d5b-99ea-4a03-82f6-bbc89786caa4.webp" height="25" alt="KEYRING PRO">
+                    <span class="textwallet">KEYRING PRO</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/be7aaf6c-8994-4c51-bd84-b5bc5eb515db.webp" height="25" alt="LOBSTR Wallet">
+                    <span class="textwallet">LOBSTR Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b2c31e6b-091b-4db9-8a9e-e5400721aa94.webp" height="25" alt="MathWallet">
+                    <span class="textwallet">MathWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/31b756c3-155f-44e6-bbe5-d3b127aaad84.webp" height="25" alt="Unstoppable Domains">
+                    <span class="textwallet">Unstoppable Domains</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e7333bf2-9db9-4e38-8bc8-fe5337ec0ed3.webp" height="25" alt="Obvious">
+                    <span class="textwallet">Obvious</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4a963d51-23d9-445f-829a-fdf65993c234.webp" height="25" alt="Fireblocks">
+                    <span class="textwallet">Fireblocks</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bd3e5b34-ee4d-4d6f-9efe-e727dda6da06.webp" height="25" alt="Ambire Wallet">
+                    <span class="textwallet">Ambire Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/27dba58e-80ff-44fc-ad5e-f5309ec792bc.webp" height="25" alt="Infinity Wallet">
+                    <span class="textwallet">Infinity Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5b74da28-ad99-4012-8252-a9656ae053c9.webp" height="25" alt="Bridge Wallet">
+                    <span class="textwallet">Bridge Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1afbba6a-a95e-4667-a821-88aebfff3ed9.webp" height="25" alt="Internet Money Wallet">
+                    <span class="textwallet">Internet Money Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0480eb05-3987-40bb-9525-c5bc2a01554a.webp" height="25" alt="NOW Wallet">
+                    <span class="textwallet">NOW Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8b4eab38-a484-4b0e-ab43-4c2aa1e7ae53.webp" height="25" alt="Bitcoin.com Wallet">
+                    <span class="textwallet">Bitcoin.com Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f94f10eb-8e77-4dbf-9d60-cb1888a97f85.webp" height="25" alt="αU wallet">
+                    <span class="textwallet">αU wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0ad5848d-7b50-423e-a946-23b4dd2d37ea.webp" height="25" alt="Coin98 Super Wallet">
+                    <span class="textwallet">Coin98 Super Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/755906a9-cb7b-4911-a738-88a08c471179.webp" height="25" alt="ABC Wallet">
+                    <span class="textwallet">ABC Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b6151c67-e6f7-409b-9b85-66c6090a5f7c.webp" height="25" alt="Ottr Finance">
+                    <span class="textwallet">Ottr Finance</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5120f60d-f62b-4751-9433-d573b3b825d9.webp" height="25" alt="Arculus Wallet">
+                    <span class="textwallet">Arculus Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b49b5878-07b3-4def-bb22-8863a82d2bfe.webp" height="25" alt="Opera Crypto Browser">
+                    <span class="textwallet">Opera Crypto Browser</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c6544033-f12e-449e-9a31-e682f5643bf0.webp" height="25" alt="Cobalt Wallet">
+                    <span class="textwallet">Cobalt Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1bf29697-632a-4708-a7c8-67d548104f4d.webp" height="25" alt="Chain">
+                    <span class="textwallet">Chain</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8589fb74-9be2-4cd7-bca7-a50d12864d0a.webp" height="25" alt="Huddln">
+                    <span class="textwallet">Huddln</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4bb523ba-e234-4272-81bf-c8ce5a7e54a8.webp" height="25" alt="Verso">
+                    <span class="textwallet">Verso</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9d777bb9-6042-480a-be1f-92f53ed1fd17.webp" height="25" alt="Jade Wallet">
+                    <span class="textwallet">Jade Wallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e7347762-8fdb-45ab-82a4-88e85c5e00e9.webp" height="25" alt="HaHa">
+                    <span class="textwallet">HaHa</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a8d47f9f-2fb8-47a6-835f-10e07a825330.webp" height="25" alt="Modular Wallet Prod">
+                    <span class="textwallet">Modular Wallet Prod</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/efa50381-b6ca-43f6-a77c-f1680007bb23.webp" height="25" alt="Kelp">
+                    <span class="textwallet">Kelp</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b062f33b-f0e6-40d9-822a-62dcf272d573.webp" height="25" alt="Numio">
+                    <span class="textwallet">Numio</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/80079f5c-2ac3-4051-ace2-41e16e708923.webp" height="25" alt="Cling Wallet">
+                    <span class="textwallet">Cling Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/11674c69-b25a-455a-b2df-c343d50f63b9.webp" height="25" alt="Broearn Wallet">
+                    <span class="textwallet">Broearn Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f58ea40c-b384-4b31-a5ac-8d136e209b72.webp" height="25" alt="Ripio Portal">
+                    <span class="textwallet">Ripio Portal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3ee04bcc-3308-4170-af27-c3485c1d806a.webp" height="25" alt="Sabay Wallet App">
+                    <span class="textwallet">Sabay Wallet App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/7661bb52-31c2-4fc8-ac85-85d2fe576ce4.webp" height="25" alt="Tokoin | My-T Wallet">
+                    <span class="textwallet">Tokoin | My-T Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3512f602-9900-446d-a778-47939b513532.webp" height="25" alt="Fncy Mobile Wallet">
+                    <span class="textwallet">Fncy Mobile Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ad07adde-0b57-4be3-8b9b-eaa9315c2800.webp" height="25" alt="Copiosa">
+                    <span class="textwallet">Copiosa</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/720afd23-a713-412e-b30e-69140f9dd563.webp" height="25" alt="Imota">
+                    <span class="textwallet">Imota</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/733df104-94dc-4023-a391-c6b9bbd2a295.webp" height="25" alt="Libera">
+                    <span class="textwallet">Libera</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/28fd8005-c92f-4157-9003-adeb3c7f3fe6.webp" height="25" alt="Certhis">
+                    <span class="textwallet">Certhis</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/13e66860-59fa-4ef0-af3f-571a2fd0738a.webp" height="25" alt="Burrito">
+                    <span class="textwallet">Burrito</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/76201f68-34ac-4299-bf9f-e3f9df29dc82.webp" height="25" alt="Ancrypto">
+                    <span class="textwallet">Ancrypto</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/cc108ed4-4726-49fd-b29b-a373916e18eb.webp" height="25" alt="Cypherock cySync">
+                    <span class="textwallet">Cypherock cySync</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0173be66-9c3a-4663-bd88-9eb68447059e.webp" height="25" alt="CVL Wallet">
+                    <span class="textwallet">CVL Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/40ac0697-586f-441b-a6c9-c5121256fb84.webp" height="25" alt="Cypher Wallet">
+                    <span class="textwallet">Cypher Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bb032f7c-0c30-466b-902f-7d0d6ab6c78e.webp" height="25" alt="Status">
+                    <span class="textwallet">Status</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/589d1f79-fe37-4cfd-8d7f-6d6fe7716104.webp" height="25" alt="Enjin Wallet">
+                    <span class="textwallet">Enjin Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/49f12e5d-be78-4b32-9e2d-9fb278978a37.webp" height="25" alt="Essentials">
+                    <span class="textwallet">Essentials</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a650f18a-8c52-438f-a193-17b4f27f6fd1.webp" height="25" alt="Everspace">
+                    <span class="textwallet">Everspace</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/261ddb84-f9cc-47fa-9902-fd3e7b5ba06e.webp" height="25" alt="BlockWallet">
+                    <span class="textwallet">BlockWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9a49c818-2581-4e91-9704-11e61d82cbe2.webp" height="25" alt="Kriptomat">
+                    <span class="textwallet">Kriptomat</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/cfde741c-6aa2-44fc-899b-9f3d078f8229.webp" height="25" alt="Oxalus Wallet">
+                    <span class="textwallet">Oxalus Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8f5406a6-06cf-43a3-aab9-9934a9cdbfc0.webp" height="25" alt="Theta Wallet">
+                    <span class="textwallet">Theta Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/490b7a2a-10e9-4f98-b95c-29c570e19f4b.webp" height="25" alt="Dawn Wallet">
+                    <span class="textwallet">Dawn Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2f0255fd-139f-4f87-b8df-09dc79daf0f0.webp" height="25" alt="Rabby">
+                    <span class="textwallet">Rabby</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/862ff3cf-ee98-48e3-b0b1-8ebd827966a4.webp" height="25" alt="Leap Cosmos Wallet">
+                    <span class="textwallet">Leap Cosmos Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/77118258-0b5a-4c37-915a-f0a62d9555b7.webp" height="25" alt="ISLAMIwallet">
+                    <span class="textwallet">ISLAMIwallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e1567bf5-93fd-4fb4-80d0-a338ac9a1e41.webp" height="25" alt="UPBOND Wallet">
+                    <span class="textwallet">UPBOND Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ea0c272c-e850-4b7e-bf92-09c4bd8aaaf8.webp" height="25" alt="VIVE Wallet">
+                    <span class="textwallet">VIVE Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d84b52ea-eb68-4486-bf2e-e2b38a9f7376.webp" height="25" alt="COCA Wallet">
+                    <span class="textwallet">COCA Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/30f8f755-2a32-4ff5-b939-2b00564a0ccc.webp" height="25" alt="BCERTin wallet">
+                    <span class="textwallet">BCERTin wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8ed64a8b-5c6b-48b7-acbc-f1b627e84f0e.webp" height="25" alt="Monarch Wallet">
+                    <span class="textwallet">Monarch Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f5501bb3-6d30-4975-8b0a-332c59b871a6.webp" height="25" alt="Valora">
+                    <span class="textwallet">Valora</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/131833da-6547-4ebe-b6fb-1d4259c89ecc.webp" height="25" alt="CoinCircle">
+                    <span class="textwallet">CoinCircle</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3b59327d-be82-4334-8ee5-a8a5eb6b1334.webp" height="25" alt="MyWalliD">
+                    <span class="textwallet">MyWalliD</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9eb8a7b6-3e3a-4ce7-8a4d-2f3fbc2d3af8.webp" height="25" alt="GameStop Wallet">
+                    <span class="textwallet">GameStop Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5dd8e379-5756-404e-9ac4-aa4734dc4e46.webp" height="25" alt="ParaSwap Wallet">
+                    <span class="textwallet">ParaSwap Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/522f453f-8e3f-4fc8-b9c2-b46732660af2.webp" height="25" alt="UvToken">
+                    <span class="textwallet">UvToken</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bcd218aa-6164-4415-a61b-f819b010b75d.webp" height="25" alt="Sahal Wallet">
+                    <span class="textwallet">Sahal Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/711db2c7-d280-4ac0-aeae-918646020e06.webp" height="25" alt="ApolloX">
+                    <span class="textwallet">ApolloX</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ca969544-7113-4149-b3ab-7d8fde32b929.webp" height="25" alt="Nitrogen Wallet">
+                    <span class="textwallet">Nitrogen Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ef8c323e-d871-4893-877b-51b5ed655946.webp" height="25" alt="Loopring">
+                    <span class="textwallet">Loopring</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e3556b23-fbe0-4c28-a006-9c615c256a83.webp" height="25" alt="BeeWallet">
+                    <span class="textwallet">BeeWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d1da0e55-21b7-4b57-835f-2fac09b70062.webp" height="25" alt="Dohrnii Wallet">
+                    <span class="textwallet">Dohrnii Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8822e638-42e7-4930-ab74-8165acbf0c6d.webp" height="25" alt="LocalTrade Wallet">
+                    <span class="textwallet">LocalTrade Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ff06ea0f-bd54-4b24-a61c-fe6d5221e122.webp" height="25" alt="Xcapit">
+                    <span class="textwallet">Xcapit</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/7740d2c5-e3ad-4e20-a81e-d71cdcef4262.webp" height="25" alt="BC Vault">
+                    <span class="textwallet">BC Vault</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/954c825d-f2b7-445a-b521-fa913597ac02.webp" height="25" alt="Neon Wallet">
+                    <span class="textwallet">Neon Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ae40a729-a640-42c0-8272-20d75d62d24d.webp" height="25" alt="Absolute Wallet">
+                    <span class="textwallet">Absolute Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/200e0994-e93d-41b4-b6b7-7d1c1254327f.webp" height="25" alt="Locker Token">
+                    <span class="textwallet">Locker Token</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4d9da2d5-bd1d-4933-b98a-df710d352755.webp" height="25" alt="Sequence Wallet">
+                    <span class="textwallet">Sequence Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/97a0ad20-1909-4f23-80eb-81792443fc93.webp" height="25" alt="Linen">
+                    <span class="textwallet">Linen</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/dd463400-53fa-4fe4-aba0-3056531f9805.webp" height="25" alt="Nabox">
+                    <span class="textwallet">Nabox</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/344dcbcc-ee27-4529-8f20-6fa295784334.webp" height="25" alt="Marble">
+                    <span class="textwallet">Marble</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/28349cf6-fcaf-46c8-aa66-616f93075e3c.webp" height="25" alt="Spatium">
+                    <span class="textwallet">Spatium</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/eff36f92-4fec-4e9a-993a-7370e12551b2.webp" height="25" alt="Cryptnox Wallet">
+                    <span class="textwallet">Cryptnox Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ac667e64-6f62-4360-bf26-6f54285ab41c.webp" height="25" alt="Ownbit">
+                    <span class="textwallet">Ownbit</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/42ef05a1-5b20-4a9a-972d-b8bf7140e25c.webp" height="25" alt="ID Pocket">
+                    <span class="textwallet">ID Pocket</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/212814fd-a3f4-44b7-92e8-c162b05852e0.webp" height="25" alt="Flooz">
+                    <span class="textwallet">Flooz</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4d3052bb-248f-4c2c-a180-1348c5961c49.webp" height="25" alt="ATON">
+                    <span class="textwallet">ATON</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/da57c0a7-0bf0-47ee-93da-1cb0a9e677b1.webp" height="25" alt="Keplr">
+                    <span class="textwallet">Keplr</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/be292a03-5d90-4e3f-a88b-7cac61b1b026.webp" height="25" alt="Brave Wallet">
+                    <span class="textwallet">Brave Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bc9a10d8-ba90-45b7-980e-3adf7772868f.webp" height="25" alt="Crossmint">
+                    <span class="textwallet">Crossmint</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/10290621-24b4-41a1-b138-9a090fd97dba.webp" height="25" alt="Gryfyn">
+                    <span class="textwallet">Gryfyn</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/077a8a00-5804-4da4-8926-b645bfd6f21e.webp" height="25" alt="pier">
+                    <span class="textwallet">pier</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4aa15097-0ca9-4953-98e2-19a2854e8d0e.webp" height="25" alt="Core">
+                    <span class="textwallet">Core</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1c83bce1-d4e0-4f13-bbcb-3a5ef802af9b.webp" height="25" alt="Taho">
+                    <span class="textwallet">Taho</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/17a4cc79-4a42-4af0-9157-2e4c0a7d2c54.webp" height="25" alt="Torus">
+                    <span class="textwallet">Torus</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/de73d5dd-e4ca-4104-b647-d6d98974aed3.webp" height="25" alt="Frame">
+                    <span class="textwallet">Frame</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/47a363f7-d1a4-43d9-9896-2485cd41e143.webp" height="25" alt="Keeper">
+                    <span class="textwallet">Keeper</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ff88532f-e4c1-4b1b-bf83-d0b8df474f15.webp" height="25" alt="Uniblow">
+                    <span class="textwallet">Uniblow</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3d843a74-2422-4cb5-9e3f-e879fcaa7409.webp" height="25" alt="D'CENT Wallet">
+                    <span class="textwallet">D'CENT Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fb02d812-a25c-4c6b-bd39-8f4c3b0646c5.webp" height="25" alt="Paper">
+                    <span class="textwallet">Paper</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/28469028-5637-4b1d-a18e-678a8711a1ba.webp" height="25" alt="RiceWallet">
+                    <span class="textwallet">RiceWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2dba37b3-3225-4457-adc1-403093d9d221.webp" height="25" alt="Okse Wallet">
+                    <span class="textwallet">Okse Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0291da0d-da83-4f3b-9c89-6523250a094a.webp" height="25" alt="Aktionariat">
+                    <span class="textwallet">Aktionariat</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ad3170c0-3524-40fc-865b-84f681a80fdc.webp" height="25" alt="Talk+">
+                    <span class="textwallet">Talk+</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b81041e1-2f4d-4d05-9d9c-2373140df148.webp" height="25" alt="PayBolt">
+                    <span class="textwallet">PayBolt</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f7a5a2db-1d7e-45d5-931e-9c0b3ba2213a.webp" height="25" alt="Plasma Wallet">
+                    <span class="textwallet">Plasma Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2e38010e-7c25-4f3d-9f3e-45fe9303a347.webp" height="25" alt="Avacus">
+                    <span class="textwallet">Avacus</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d105d00b-10df-4b17-a0a7-a4dbf42e1d4d.webp" height="25" alt="ByteBank">
+                    <span class="textwallet">ByteBank</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9c4a802c-9ec4-44fb-890e-3b2ac45a3bcf.webp" height="25" alt="CoolWallet">
+                    <span class="textwallet">CoolWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/800d3485-a523-46d5-818b-f09fa061064c.webp" height="25" alt="Opto Wallet">
+                    <span class="textwallet">Opto Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9570e9a3-9ead-4df1-b188-0e9afda51647.webp" height="25" alt="Bee Wallet">
+                    <span class="textwallet">Bee Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/52ba99bb-e8c2-4d49-b5c2-16ce1ce33ef0.webp" height="25" alt="MDAO Wallet">
+                    <span class="textwallet">MDAO Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b8bf4243-5e12-4d14-9ccd-61a517eafe1b.webp" height="25" alt="PLTwallet">
+                    <span class="textwallet">PLTwallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/041feedc-aa6f-43e1-9327-e14d32ffa757.webp" height="25" alt="helix id">
+                    <span class="textwallet">helix id</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/75fd022e-c9b1-49ad-a26b-2e8d10f2ca73.webp" height="25" alt="AirGap Wallet">
+                    <span class="textwallet">AirGap Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9b91b6a9-0fab-44c2-a7fd-ef47c43efa67.webp" height="25" alt="Qubic Wallet">
+                    <span class="textwallet">Qubic Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8dde755c-9945-4a6e-a897-1764b49fc863.webp" height="25" alt="Holdstation Wallet">
+                    <span class="textwallet">Holdstation Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a72e5618-454e-48f8-ba88-8506bd0e18e0.webp" height="25" alt="Saakuru All-in-One crypto App">
+                    <span class="textwallet">Saakuru All-in-One crypto App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f3141c11-b794-4d36-b740-a44c390319b1.webp" height="25" alt="3S Wallet">
+                    <span class="textwallet">3S Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/da936ebe-3aa7-4386-9f2b-cd9d983a6da8.webp" height="25" alt="Payperless">
+                    <span class="textwallet">Payperless</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5e7e2048-d1ac-44b8-9dd6-deb5c9c5aaae.webp" height="25" alt="Minerva Wallet">
+                    <span class="textwallet">Minerva Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/697ce621-b9e3-4a9d-974e-1bae378c2d99.webp" height="25" alt="Lif3 Wallet">
+                    <span class="textwallet">Lif3 Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8a57d620-3ffb-4f2e-8d3d-5e8a39ff131b.webp" height="25" alt="Shinobi-Wallet">
+                    <span class="textwallet">Shinobi-Wallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/58723ba4-14a0-4b15-acd6-a4f4c755351b.webp" height="25" alt="KryptoGO Wallet">
+                    <span class="textwallet">KryptoGO Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1f8ee3d0-931e-4a8e-b4f6-3a56e6a84265.webp" height="25" alt="Feral File">
+                    <span class="textwallet">Feral File</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/61f7a0e5-d463-4133-b67d-45202524e746.webp" height="25" alt="Bifrost Wallet">
+                    <span class="textwallet">Bifrost Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/01cda5cc-83c4-4a52-b5aa-304b2ce152a7.webp" height="25" alt="Nufinetes">
+                    <span class="textwallet">Nufinetes</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/aa1dd5a8-f559-4c70-8fab-fa432b21c148.webp" height="25" alt="Wallet 3">
+                    <span class="textwallet">Wallet 3</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0df8bbee-2dc8-4550-b868-048f9384dd58.webp" height="25" alt="Abra Wallet">
+                    <span class="textwallet">Abra Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6248e4fa-f2f9-4d5b-8224-73664c0d65c9.webp" height="25" alt="PREMA Wallet">
+                    <span class="textwallet">PREMA Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/542bbb34-f874-460b-8085-25815b9d67b9.webp" height="25" alt="OneKey">
+                    <span class="textwallet">OneKey</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e12edc5c-22ed-454a-a8bb-2efee841a4d6.webp" height="25" alt="Slingshot Wallet">
+                    <span class="textwallet">Slingshot Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a00a4011-2d7b-45be-87c3-38434d8fc5a9.webp" height="25" alt="Kriptonio">
+                    <span class="textwallet">Kriptonio</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3156bdbe-2561-4266-87ff-6edcc7373a84.webp" height="25" alt="Timeless Wallet">
+                    <span class="textwallet">Timeless Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/37fbf283-7f27-40cd-9c3f-407e07b358f2.webp" height="25" alt="Venly">
+                    <span class="textwallet">Venly</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6a73d0d9-3988-4524-9fcd-be571cf2cad0.webp" height="25" alt="Bitski">
+                    <span class="textwallet">Bitski</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/71fa5ab0-5fab-469d-88f3-c127b5fa4273.webp" height="25" alt="XDEFI Wallet">
+                    <span class="textwallet">XDEFI Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f3d8c3f3-c33b-4f1b-bc14-452025476653.webp" height="25" alt="Streakk Wallet">
+                    <span class="textwallet">Streakk Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c61f8e20-cb36-4537-8262-9670574fcf6c.webp" height="25" alt="SaitaPro">
+                    <span class="textwallet">SaitaPro</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a6a1bd08-945b-4aa8-ae3a-2a3a8feaa429.webp" height="25" alt="Flow Wallet">
+                    <span class="textwallet">Flow Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/760a9986-1257-41a5-9ac4-f7a2ce01f8d1.webp" height="25" alt="Hippo Wallet">
+                    <span class="textwallet">Hippo Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/753c5b0e-aa86-4051-8bad-83c5da96cfef.webp" height="25" alt="Cosmostation">
+                    <span class="textwallet">Cosmostation</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/83ffe238-fa1a-43a3-b122-271eb25ec5e3.webp" height="25" alt="Bitizen">
+                    <span class="textwallet">Bitizen</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4e92c2a0-c622-4953-9320-7f66eaf860e5.webp" height="25" alt="Blocto">
+                    <span class="textwallet">Blocto</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/764489d7-27a1-4856-b49e-27a286435b3f.webp" height="25" alt="HUMBL WALLET">
+                    <span class="textwallet">HUMBL WALLET</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b97f7910-241c-497f-9461-1c498cca2232.webp" height="25" alt="PassPay Wallet">
+                    <span class="textwallet">PassPay Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e1f64dcc-5f0c-484f-a340-ca9629d4d754.webp" height="25" alt="Ultimate">
+                    <span class="textwallet">Ultimate</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ef7d6cdc-5fca-4c1d-8858-1d4be9348f6b.webp" height="25" alt="Me Wallet">
+                    <span class="textwallet">Me Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fe30a134-92ab-4fa6-b738-305ca809aeaf.webp" height="25" alt="THORWallet">
+                    <span class="textwallet">THORWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d1d4f971-670b-47f9-8d6e-99dcff7c8dba.webp" height="25" alt="Fizz">
+                    <span class="textwallet">Fizz</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/01834fc6-2b8a-416c-8353-214c8a951273.webp" height="25" alt="PiEthereum Hardware">
+                    <span class="textwallet">PiEthereum Hardware</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9fe9212c-3f56-4a69-a790-0f62190215f3.webp" height="25" alt="Reunit">
+                    <span class="textwallet">Reunit</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d204f995-aac3-4021-b834-67d13109820e.webp" height="25" alt="Arianee Wallet">
+                    <span class="textwallet">Arianee Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/213bcd30-86fe-49ff-8f12-6942951c670a.webp" height="25" alt="Tholos">
+                    <span class="textwallet">Tholos</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8ddff4fe-ca01-44c2-a462-ce2635136b2d.webp" height="25" alt="Stickey Wallet">
+                    <span class="textwallet">Stickey Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ac468d97-9027-4904-a46f-77471fa3b072.webp" height="25" alt="Klip">
+                    <span class="textwallet">Klip</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a97c7659-0bfe-4213-b0c8-373b4d94c1e5.webp" height="25" alt="CoinStats">
+                    <span class="textwallet">CoinStats</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e49f6d25-5d7c-4236-a458-1a58b76a28f3.webp" height="25" alt="LikerLand App">
+                    <span class="textwallet">LikerLand App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/748054b5-aeda-4bd8-a0a9-3909b10784d6.webp" height="25" alt="Krystal">
+                    <span class="textwallet">Krystal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a19449d8-1ec7-4359-998e-087b8710dc91.webp" height="25" alt="KeepKey Desktop">
+                    <span class="textwallet">KeepKey Desktop</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8a4fbd08-a66d-4531-91f9-838f643b1750.webp" height="25" alt="Pillar">
+                    <span class="textwallet">Pillar</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/35d87a1a-6e6f-4e33-85fa-aed3e38959f7.webp" height="25" alt="HARTi Wallet">
+                    <span class="textwallet">HARTi Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4bb10473-c9a1-41c7-98f8-3af9db57a238.webp" height="25" alt="Stasis Wallet">
+                    <span class="textwallet">Stasis Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/855be3c5-bc6b-4256-8512-6ceb9b797160.webp" height="25" alt="Nova Wallet">
+                    <span class="textwallet">Nova Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/488035ad-f0c3-4a79-8ff7-16169bc794cc.webp" height="25" alt="meta-WONDER-verse">
+                    <span class="textwallet">meta-WONDER-verse</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/75a1f9b4-6268-409d-a9ad-35bcd70e85e1.webp" height="25" alt="DTTD">
+                    <span class="textwallet">DTTD</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f786c809-41d1-4ca6-8976-a1016c4a5020.webp" height="25" alt="FoxWallet">
+                    <span class="textwallet">FoxWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/813feba9-23ef-4bb4-acdc-18a836294052.webp" height="25" alt="HAQQ Wallet">
+                    <span class="textwallet">HAQQ Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/022ad676-7d08-4e15-879d-03b8f73e57a9.webp" height="25" alt="tomiPAY">
+                    <span class="textwallet">tomiPAY</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0fc85f05-ee40-4b05-9eaa-c9223c58409c.webp" height="25" alt="StrikeX Wallet">
+                    <span class="textwallet">StrikeX Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/40b1ff3e-8ff8-491c-a643-e918c6e94e27.webp" height="25" alt="Nash">
+                    <span class="textwallet">Nash</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e2627542-5c86-4ac4-a92f-408f4618cb03.webp" height="25" alt="Bybit Wallet">
+                    <span class="textwallet">Bybit Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6cc22193-32e4-4065-83fa-135fbde942fc.webp" height="25" alt="SubWallet">
+                    <span class="textwallet">SubWallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/671bc438-5d4a-471f-b3d6-789663c5552c.webp" height="25" alt="Okto">
+                    <span class="textwallet">Okto</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ec340677-0e93-4cf1-85be-3949d52fa899.webp" height="25" alt="Catecoin Wallet">
+                    <span class="textwallet">Catecoin Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/21d3c6de-adb4-4c85-96f5-2b5f7e73def0.webp" height="25" alt="UKISS Hub">
+                    <span class="textwallet">UKISS Hub</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4115d1be-190f-4095-a2af-fb6f7c6523d6.webp" height="25" alt="Tellaw Wallet">
+                    <span class="textwallet">Tellaw Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0915f380-b0ee-4351-a7f9-72faaef202fc.webp" height="25" alt="Tangem Wallet">
+                    <span class="textwallet">Tangem Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/724232f6-218b-4573-861e-6481ef4f99ea.webp" height="25" alt="Callback">
+                    <span class="textwallet">Callback</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8f1172ac-004b-401b-aa5d-8b73737a0ba0.webp" height="25" alt="SA ASSISTANT">
+                    <span class="textwallet">SA ASSISTANT</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bd2a766e-67e2-4153-aaa5-2bf3a795d57f.webp" height="25" alt="Xellar">
+                    <span class="textwallet">Xellar</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fd12a91e-4b6a-4cb4-bcca-7285c48dc64d.webp" height="25" alt="Talken Wallet">
+                    <span class="textwallet">Talken Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4dfd80da-1647-4ea7-8c65-d2bd465d9650.webp" height="25" alt="U2U Wallet">
+                    <span class="textwallet">U2U Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4aaa601a-aa54-4854-8a9d-95f469bb9bc7.webp" height="25" alt="OzoneWallet">
+                    <span class="textwallet">OzoneWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/dfa2a782-1f32-4ee0-bc47-f05625021753.webp" height="25" alt="Tidus Wallet ">
+                    <span class="textwallet">Tidus Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a7df1396-275b-4524-b477-af9755fabc15.webp" height="25" alt="Impact Wallet">
+                    <span class="textwallet">Impact Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/cdd15e21-5241-4cb4-ab25-c84f856eb241.webp" height="25" alt="COCA Wallet">
+                    <span class="textwallet">COCA Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f8b838a3-f5cd-4a00-b1c5-a44a1f39b638.webp" height="25" alt="Zelcore">
+                    <span class="textwallet">Zelcore</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/024ce8d3-0132-4d64-bf63-ce6c80765fec.webp" height="25" alt="DOSI Vault">
+                    <span class="textwallet">DOSI Vault</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e5118786-65ae-4ccc-8e22-7776c230ef73.webp" height="25" alt="WOW EARN">
+                    <span class="textwallet">WOW EARN</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a9f42557-752e-4206-a8ce-645722276683.webp" height="25" alt="ELLIPAL">
+                    <span class="textwallet">ELLIPAL</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/214f5bb7-3c1f-440f-8c23-8c0b85009cdd.webp" height="25" alt="Unstoppable Wallet">
+                    <span class="textwallet">Unstoppable Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/34736b5d-91ce-4a12-a523-911b5a392d4e.webp" height="25" alt="Aurora Pass">
+                    <span class="textwallet">Aurora Pass</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/dbd33d69-6aa6-49a8-853c-e870345a8d1b.webp" height="25" alt="Bitverse">
+                    <span class="textwallet">Bitverse</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f60c69e9-8943-4fa9-bf47-5560902e22d1.webp" height="25" alt="Konio">
+                    <span class="textwallet">Konio</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9b35548a-d062-4257-b4d3-412e5a2165a0.webp" height="25" alt="GateWeb3">
+                    <span class="textwallet">GateWeb3</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/687a6280-55f7-447c-9de4-0f2432ee7ca7.webp" height="25" alt="UTORG">
+                    <span class="textwallet">UTORG</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d711d593-b412-462d-974f-124399134f15.webp" height="25" alt="CoinWallet">
+                    <span class="textwallet">CoinWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/666a80de-19b9-423c-a2ca-4123feed9163.webp" height="25" alt="Ammer Wallet">
+                    <span class="textwallet">Ammer Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/61fa5bd4-6cb5-42ac-a959-dcb50230fdc9.webp" height="25" alt="Binance.US">
+                    <span class="textwallet">Binance.US</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1640fa3f-6784-4bf2-8f31-8ba2a1bc01fb.webp" height="25" alt="SISTEMAS">
+                    <span class="textwallet">SISTEMAS</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ecf21e12-6f53-43aa-afab-e8c8f0d8df37.webp" height="25" alt="MUZA">
+                    <span class="textwallet">MUZA</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3d0a2da5-78a6-414d-990d-551f41a9c702.webp" height="25" alt="FxWallet">
+                    <span class="textwallet">FxWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8ec1f6ce-3e3d-4ffa-98ec-8982cc2755ce.webp" height="25" alt="RYIPAY">
+                    <span class="textwallet">RYIPAY</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9f4800c1-684c-4c54-a16b-9d878270188c.webp" height="25" alt="Ronin Wallet">
+                    <span class="textwallet">Ronin Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/52358a78-ef1b-4aa2-9040-122da7a546a8.webp" height="25" alt="Sequel Wallet">
+                    <span class="textwallet">Sequel Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/81717d6e-a839-4605-995c-fa9dce01e277.webp" height="25" alt="MetaWallet">
+                    <span class="textwallet">MetaWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c81977d7-53be-4c25-a742-835dbde59916.webp" height="25" alt="Altme">
+                    <span class="textwallet">Altme</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/22608bc0-b847-4020-936c-1436c73558f3.webp" height="25" alt="Unido">
+                    <span class="textwallet">Unido</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/243ae5fb-21e2-4540-8c3b-4bcd3247c5de.webp" height="25" alt="Bitpie">
+                    <span class="textwallet">Bitpie</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fe7163cb-0232-4b76-8ebf-9be76de7e555.webp" height="25" alt="MOONSTAKE">
+                    <span class="textwallet">MOONSTAKE</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/87613781-7f96-4eee-b9cd-cbcb9f51833b.webp" height="25" alt="IndiGG">
+                    <span class="textwallet">IndiGG</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3e645bc8-bc7a-4a8f-bb4e-c4c4a8bb91bf.webp" height="25" alt="Yuse Wallet">
+                    <span class="textwallet">Yuse Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5f4e0d81-988a-42d3-9b0d-837781391d0f.webp" height="25" alt="Coininn Wallet">
+                    <span class="textwallet">Coininn Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0e316faa-18ad-40df-8ef9-a96aa7d82e1f.webp" height="25" alt="Safe App Syscoin">
+                    <span class="textwallet">Safe App Syscoin</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/58012954-56d4-4f34-9ccc-3127346e01e4.webp" height="25" alt="f(x)Wallet">
+                    <span class="textwallet">f(x)Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c07e7d09-255d-460c-a861-78498dbc3e54.webp" height="25" alt="pockie">
+                    <span class="textwallet">pockie</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e4d7eacb-2c43-4359-975f-e7455122a02d.webp" height="25" alt="AmazeWallet">
+                    <span class="textwallet">AmazeWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0672be9d-fffd-4b3c-9d80-d98c4a6fd70f.webp" height="25" alt="Pali Wallet">
+                    <span class="textwallet">Pali Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8007bf99-a1ef-4f2d-9161-09a86c238e93.webp" height="25" alt="NuFi">
+                    <span class="textwallet">NuFi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b1f1f85c-48b1-473c-8a28-1a3b574192aa.webp" height="25" alt="EASY">
+                    <span class="textwallet">EASY</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b118516a-2145-48a9-8879-1e7fb33d78eb.webp" height="25" alt="Solace">
+                    <span class="textwallet">Solace</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bcf97407-20cc-4cee-91bc-fa32ce567d63.webp" height="25" alt="Meter Wallet">
+                    <span class="textwallet">Meter Wallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f3810705-280a-4061-a4c8-c0155cd6e485.webp" height="25" alt="SuperWallet">
+                    <span class="textwallet">SuperWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3a4a70ae-7b36-484a-add1-888dc4fe6262.webp" height="25" alt="SecuX">
+                    <span class="textwallet">SecuX</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/80ecf248-66ca-4691-8684-1c0189bb3240.webp" height="25" alt="DMToken">
+                    <span class="textwallet">DMToken</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3dab4414-1245-40a3-a98e-aa03899fcd66.webp" height="25" alt="Lode Wallet">
+                    <span class="textwallet">Lode Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a840f0d0-8325-488a-b6a4-39aebb71ccd9.webp" height="25" alt="DIDWallet">
+                    <span class="textwallet">DIDWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8847229c-ff78-4edc-b71c-3ee3d53ad729.webp" height="25" alt="Halo Wallet">
+                    <span class="textwallet">Halo Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/12862e82-4bb9-460e-bbb5-acdb83e3b3fc.webp" height="25" alt="Sinohope">
+                    <span class="textwallet">Sinohope</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ba81c57f-9593-4e52-a268-347974e67bb3.webp" height="25" alt="Ballet Crypto">
+                    <span class="textwallet">Ballet Crypto</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/75146d9f-cd9e-452d-a709-1605fdc1bfe6.webp" height="25" alt="OPZ Wallet">
+                    <span class="textwallet">OPZ Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/30ea2913-2f6a-455c-8003-6d2be5e5401c.webp" height="25" alt="Fizen Wallet">
+                    <span class="textwallet">Fizen Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ae07c9aa-c5cd-4811-b49f-a8b714964d5c.webp" height="25" alt="campux.digital">
+                    <span class="textwallet">campux.digital</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9c36882b-0744-44ca-8da0-0b4657015cdb.webp" height="25" alt="Kresus SuperApp">
+                    <span class="textwallet">Kresus SuperApp</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4da30c6b-e12b-412e-bb1c-44cbdf6e7354.webp" height="25" alt="midoin">
+                    <span class="textwallet">midoin</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ae6f81fe-ad67-40e6-bc30-b711fd34711f.webp" height="25" alt="ONTO">
+                    <span class="textwallet">ONTO</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b1fae47a-67ba-4339-a851-3375c059e00e.webp" height="25" alt="UniPass Wallet">
+                    <span class="textwallet">UniPass Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/78b069c3-4c07-40e9-b204-e7d703a3462a.webp" height="25" alt="Suku Wallet">
+                    <span class="textwallet">Suku Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/34dd180f-6ccf-417d-a580-712f6fcb7566.webp" height="25" alt="Oasys Passport">
+                    <span class="textwallet">Oasys Passport</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a38c65ab-e4f4-4bf3-b4ba-2254bdd19e2a.webp" height="25" alt="GoodDollar">
+                    <span class="textwallet">GoodDollar</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/226ebbbe-ed6a-4027-9781-88b15fdbc92e.webp" height="25" alt="Hellō">
+                    <span class="textwallet">Hellō</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ff625349-b170-4801-b1a7-9bb3d3eca366.webp" height="25" alt="Competence.id">
+                    <span class="textwallet">Competence.id</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8226ae3b-4b16-4340-8ac1-53872a9976d4.webp" height="25" alt="Dippi">
+                    <span class="textwallet">Dippi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9582a076-6cac-4e47-a06b-78e032cd967f.webp" height="25" alt="Spot On Chain App">
+                    <span class="textwallet">Spot On Chain App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e5d5f51b-5e15-450e-8452-c5d84f0ebaa7.webp" height="25" alt="DGG Wallet">
+                    <span class="textwallet">DGG Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fe075198-cb39-4468-93d0-fb47cb4075c7.webp" height="25" alt="Deficloud">
+                    <span class="textwallet">Deficloud</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6c6007de-e118-4847-ad43-65fb7578c401.webp" height="25" alt="BeanBag">
+                    <span class="textwallet">BeanBag</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/7e82ccf5-007d-4b87-b312-37a475e3f5c5.webp" height="25" alt="Gamic">
+                    <span class="textwallet">Gamic</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bf0715f4-f724-4f99-ad06-a4eda96a3aaf.webp" height="25" alt="Smart.Baby">
+                    <span class="textwallet">Smart.Baby</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/95c2ff95-dd14-4d61-a5bf-73ae4ef52cf9.webp" height="25" alt="Gridlock Wallet">
+                    <span class="textwallet">Gridlock Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/656d20a6-27b4-4805-bf76-322e2237c727.webp" height="25" alt="Newmoney.AI">
+                    <span class="textwallet">Newmoney.AI</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/85ee7c0f-c730-454a-8c43-6061febb4909.webp" height="25" alt="Zeal">
+                    <span class="textwallet">Zeal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f7094323-e67f-4677-8fed-ed46ae9617fb.webp" height="25" alt="IApp">
+                    <span class="textwallet">IApp</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/79e8ce91-8161-4130-926f-1241f134ad97.webp" height="25" alt="Kayros">
+                    <span class="textwallet">Kayros</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/dbc7fa7f-a564-4248-a4c3-fa68100f5924.webp" height="25" alt="TrustKeys Web3 SocialFi">
+                    <span class="textwallet">TrustKeys Web3 SocialFi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/46af6563-3984-4de2-8603-f21cc312bd19.webp" height="25" alt="DS Security SA">
+                    <span class="textwallet">DS Security SA</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fc287731-481c-4f94-9a2b-93e4fc54164e.webp" height="25" alt="Concordium">
+                    <span class="textwallet">Concordium</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/7ad46e0b-acaf-4ab1-a60a-4d0cd141a5be.webp" height="25" alt="Ape Wallet">
+                    <span class="textwallet">Ape Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d7df77da-6c61-4396-b8a6-bad57765bbb8.webp" height="25" alt="thirdweb">
+                    <span class="textwallet">thirdweb</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f0c7a303-f48e-49ec-9f75-1fffec6d2d74.webp" height="25" alt="Oisy Wallet">
+                    <span class="textwallet">Oisy Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5fb90798-0dfa-4e88-8f10-12c1a371bc31.webp" height="25" alt="Pitaka">
+                    <span class="textwallet">Pitaka</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b7ded1e7-d91d-497f-80d5-6263f87148e4.webp" height="25" alt="LichtBit">
+                    <span class="textwallet">LichtBit</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ba852f95-b8b5-489e-ba02-445fa8bb9748.webp" height="25" alt="Trustee Wallet">
+                    <span class="textwallet">Trustee Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0587c5dc-18df-4098-8047-6d617730bfc1.webp" height="25" alt="rss wallet">
+                    <span class="textwallet">rss wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c7ceabdd-3186-4f51-913e-d0fec93b306f.webp" height="25" alt="Dropp">
+                    <span class="textwallet">Dropp</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8f7c012f-fcd6-432e-a63e-c614f6d7d5c0.webp" height="25" alt="Roam">
+                    <span class="textwallet">Roam</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c5a76bb6-ded8-42ca-a391-b3004685a096.webp" height="25" alt="My Cloud Wallet">
+                    <span class="textwallet">My Cloud Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e667bc73-e258-41d8-8f5a-1bb45878914d.webp" height="25" alt="3mint">
+                    <span class="textwallet">3mint</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/159bc180-7f84-4f83-bc64-6cdf6641cd68.webp" height="25" alt="Qoin Wallet">
+                    <span class="textwallet">Qoin Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5c977607-0877-4524-afa9-519a39bddd8d.webp" height="25" alt="MELDapp">
+                    <span class="textwallet">MELDapp</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3223abbf-75c4-4931-a05a-18bf51c2a5b9.webp" height="25" alt="Best Wallet">
+                    <span class="textwallet">Best Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/acc0d2d0-448b-4819-bfa2-28dfa0df5236.webp" height="25" alt="HyperPay">
+                    <span class="textwallet">HyperPay</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bd4cec42-bc53-4aa2-beff-8d5bda094c66.webp" height="25" alt="Xucre">
+                    <span class="textwallet">Xucre</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e31b5825-7d04-4b7b-8dc8-ed34a31ecfb9.webp" height="25" alt="HERE Wallet">
+                    <span class="textwallet">HERE Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a33f7e74-bdff-4747-8817-9d9c03974773.webp" height="25" alt="Cake Wallet">
+                    <span class="textwallet">Cake Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1cb1816b-d4c5-4dd6-873b-dee6832fbf9e.webp" height="25" alt="una Wallet">
+                    <span class="textwallet">una Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b3791113-d6bb-46b5-a591-2b72d688727c.webp" height="25" alt="Ethos Self-Custody Vault">
+                    <span class="textwallet">Ethos Self-Custody Vault</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2a8b9b50-61f6-4135-8695-d5386c1445d2.webp" height="25" alt="Plus Wallet">
+                    <span class="textwallet">Plus Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/992b80ad-3386-42a2-8f85-df1f7e9600c8.webp" height="25" alt="AT.Wallet">
+                    <span class="textwallet">AT.Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4eae455e-ea01-427b-8cdc-c63c35eab330.webp" height="25" alt="Plena-App">
+                    <span class="textwallet">Plena-App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/351099db-ff4f-492f-9d1f-753e206620c4.webp" height="25" alt="Numo Wallet">
+                    <span class="textwallet">Numo Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/95354b4c-d349-4255-9dd9-9b2bcbc580fe.webp" height="25" alt="MG">
+                    <span class="textwallet">MG</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4cee1719-3800-4fae-87a0-9eb6c5e08f58.webp" height="25" alt="BitFrost">
+                    <span class="textwallet">BitFrost</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fc8874b1-20fa-47da-a8c8-970548b39d24.webp" height="25" alt="WemixWallet">
+                    <span class="textwallet">WemixWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/75a60f2e-9924-4330-8153-7b2f3085fc15.webp" height="25" alt="Gem Wallet">
+                    <span class="textwallet">Gem Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ad4df7b7-040a-40ae-aa96-4ac7eb65ab9b.webp" height="25" alt="Multix">
+                    <span class="textwallet">Multix</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/51737f87-91d3-43b5-8d84-7c79da5743d7.webp" height="25" alt="Caesium">
+                    <span class="textwallet">Caesium</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ca12254c-480c-4de8-a011-20eb47f046f9.webp" height="25" alt="FINTOKEN">
+                    <span class="textwallet">FINTOKEN</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d93d4e13-8377-4e1c-9ed3-a6015c459366.webp" height="25" alt="PEAKDEFI">
+                    <span class="textwallet">PEAKDEFI</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a638dcc6-7290-4f47-94ee-5ee11fb90179.webp" height="25" alt="Nodle">
+                    <span class="textwallet">Nodle</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a60e0eed-4c70-424c-bd94-870cb4f36280.webp" height="25" alt="Hoo!Wallet">
+                    <span class="textwallet">Hoo!Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9741c4bf-ebae-462d-ac9f-97e1f035cd68.webp" height="25" alt="Cryptokara">
+                    <span class="textwallet">Cryptokara</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/50633b6e-e882-40f6-9765-dde0b58ffffe.webp" height="25" alt="poolswallet">
+                    <span class="textwallet">poolswallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/11bf39d8-97e5-47e4-a8c5-52875b5dfef5.webp" height="25" alt="VeWorld Mobile">
+                    <span class="textwallet">VeWorld Mobile</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5fde553d-7ada-4196-a6bf-96d32fe06af5.webp" height="25" alt="AZCoiner">
+                    <span class="textwallet">AZCoiner</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/38511157-7546-4679-a086-c2d8fec3931d.webp" height="25" alt="Jambo">
+                    <span class="textwallet">Jambo</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8493c463-2c98-4b09-bc3e-4436f7bd0cf4.webp" height="25" alt="UIIC">
+                    <span class="textwallet">UIIC</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/14a7b0b2-02d0-48bb-8794-a49656ac272f.webp" height="25" alt="M1NTY">
+                    <span class="textwallet">M1NTY</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2b891e26-b80a-4b8d-93d2-94f14904f720.webp" height="25" alt="PLDT">
+                    <span class="textwallet">PLDT</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1c2df840-42d8-43ef-a17b-186b0b49f231.webp" height="25" alt="Buda.com">
+                    <span class="textwallet">Buda.com</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3f30aacc-0b07-42b0-87dd-0d8c58bca333.webp" height="25" alt="Nova Spektr">
+                    <span class="textwallet">Nova Spektr</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ed77df94-622c-48fe-b021-f0cc3d7fe115.webp" height="25" alt="Noone Wallet">
+                    <span class="textwallet">Noone Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a50d1ca7-12d6-49c9-827a-ca59d8e4f659.webp" height="25" alt="GateWallet">
+                    <span class="textwallet">GateWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1a65f58b-6cf6-41f8-b5a0-54d739593003.webp" height="25" alt="Youba">
+                    <span class="textwallet">Youba</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f153fc92-c6b9-46ee-ad0b-7a6e2a98cd12.webp" height="25" alt="Bitso Web3 Wallet">
+                    <span class="textwallet">Bitso Web3 Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/4ceecf80-4fa1-4e6f-b894-8e66fd12258a.webp" height="25" alt="Puzzle Wallet">
+                    <span class="textwallet">Puzzle Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/24214069-df80-4add-bb95-f5406b7c6561.webp" height="25" alt="SmartRush">
+                    <span class="textwallet">SmartRush</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/59de256d-ed44-43fa-ab91-90be4539c4b4.webp" height="25" alt="BlackFort Wallet">
+                    <span class="textwallet">BlackFort Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6a2a9149-ca5b-4e9d-b6b1-62c0d018e431.webp" height="25" alt="Bitwinex">
+                    <span class="textwallet">Bitwinex</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/07f1618b-fd60-42b0-bde9-8e1aee99ea5b.webp" height="25" alt="Armana Portal">
+                    <span class="textwallet">Armana Portal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/24cc69ee-d4df-4e95-b0c2-6e36401cc786.webp" height="25" alt="BharatBox App">
+                    <span class="textwallet">BharatBox App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ec768f09-9740-411b-a60a-6560d6a70b36.webp" height="25" alt="eth-q1">
+                    <span class="textwallet">eth-q1</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/72187c5d-8c60-43fe-a054-f16525c21ebf.webp" height="25" alt="Blanq">
+                    <span class="textwallet">Blanq</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a4943d20-8c4e-43c7-9a2d-506787ca76b2.webp" height="25" alt="Kaikas">
+                    <span class="textwallet">Kaikas</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1cc588bb-3df3-4117-bba6-343da8ef62fc.webp" height="25" alt="Blockaura">
+                    <span class="textwallet">Blockaura</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/11d838aa-9b60-4f62-a93c-6e40d3c17cad.webp" height="25" alt="X9Wallet">
+                    <span class="textwallet">X9Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d22742a2-a094-4017-826a-d55852ef76ed.webp" height="25" alt="Mirai App">
+                    <span class="textwallet">Mirai App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/598a3d50-c280-421b-baa3-b700a835479b.webp" height="25" alt="Kigo">
+                    <span class="textwallet">Kigo</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1be9888a-29ca-4559-bc9e-76c43be53794.webp" height="25" alt="Levain">
+                    <span class="textwallet">Levain</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/48e257d0-2d61-446e-9944-2afdf845b579.webp" height="25" alt="KAX-Wallet">
+                    <span class="textwallet">KAX-Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/dd938281-3ca9-4850-be73-99da8d44e852.webp" height="25" alt="Facewallet">
+                    <span class="textwallet">Facewallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5a25ec6d-27ec-45fd-bd54-c619303e3512.webp" height="25" alt="Timeless X">
+                    <span class="textwallet">Timeless X</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/84b37880-98e1-4f33-b12a-9dca7649ce96.webp" height="25" alt="JoyID Passkey">
+                    <span class="textwallet">JoyID Passkey</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c838cf12-526e-4aa1-b2e0-3e6018278663.webp" height="25" alt="Cogni">
+                    <span class="textwallet">Cogni</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/9801e4a2-bb4b-4950-807d-1aa94aa01386.webp" name="37x">
+                    <span class="textwallet">37x</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e09e0aa5-8b9a-4569-9f03-66d1860499c4.webp" name="Rovi Money">
+                    <span class="textwallet">Rovi Money</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/00b15393-5c21-4f73-815e-e9f62568dbd5.webp" name="NoF">
+                    <span class="textwallet">NoF</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fe6bfe74-77ec-46fe-8079-eb366405d7ce.webp" name="Toric Wallet">
+                    <span class="textwallet">Toric Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/524904ca-4fb2-4f98-9d0d-4f4d616af59d.webp" name="Enkrypt">
+                    <span class="textwallet">Enkrypt</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2a0411cc-e20a-44d2-b1bc-5c916551788a.webp" name="Scramble">
+                    <span class="textwallet">Scramble</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/eecd620a-c369-4972-bc1f-b3215e6b3280.webp" name="Fastex Wallet">
+                    <span class="textwallet">Fastex Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/23169fb1-21ec-4666-b4b5-b98ff80913ee.webp" name="Wallacy">
+                    <span class="textwallet">Wallacy</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/874320c2-604a-4274-abe3-0ab44c777489.webp" name="Talk+">
+                    <span class="textwallet">Talk+</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/59e209ae-ed3c-431d-8401-5ff16cbf86c8.webp" name="Zelus Wallet">
+                    <span class="textwallet">Zelus Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/28a4c124-d1e1-4b8e-91bb-4498bf10e1af.webp" name="Capsule">
+                    <span class="textwallet">Capsule</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d799beae-43c2-4aed-9ea5-10a8af31ed2d.webp" name="ShimmerSea">
+                    <span class="textwallet">ShimmerSea</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0f127dfa-299d-41f1-9687-59ec4d63e31c.webp" name="Savl">
+                    <span class="textwallet">Savl</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/92db2804-3ea5-4724-bb85-869e97dbba30.webp" name="Sinum">
+                    <span class="textwallet">Sinum</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e6455e42-461e-461d-866e-c188616922a2.webp" name="SoulSwap">
+                    <span class="textwallet">SoulSwap</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a9c43fc0-6122-4d08-baf2-e5bdb28214b9.webp" name="ShapeShift">
+                    <span class="textwallet">ShapeShift</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e0cb3f35-f046-4d0a-adab-dede541f8c7f.webp" name="Panaroma Wallet">
+                    <span class="textwallet">Panaroma Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c6faf361-7b3f-4167-90ca-3fa67c680c99.webp" name="NEOPIN">
+                    <span class="textwallet">NEOPIN</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bf14f162-4571-410e-86a8-c2240437a125.webp" name="Alicebob Wallet">
+                    <span class="textwallet">Alicebob Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f3b9bc60-6553-40d8-af80-495aca1ae35f.webp" name="CyberWallet">
+                    <span class="textwallet">CyberWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fcc6693a-3e7d-4da1-829e-3f58b6a8ca55.webp" name="DexTrade">
+                    <span class="textwallet">DexTrade</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2e080771-28ce-4125-bc42-4d4b9175e11f.webp" name="HashPack">
+                    <span class="textwallet">HashPack</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/64a71939-6660-4eb1-b224-25765ce0c566.webp" name="The Pulse Wallet">
+                    <span class="textwallet">The Pulse Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d7621dd8-8ed4-47c7-ada1-7dadaaf7bf20.webp" name="Pintu">
+                    <span class="textwallet">Pintu</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/11c92222-f7b7-40a8-9193-659b3cb69a66.webp" name="Blade Wallet">
+                    <span class="textwallet">Blade Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/1874fe01-90b0-4a75-b84b-cd48512ca552.webp" name="Pandoshi Wallet">
+                    <span class="textwallet">Pandoshi Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/ab2aede5-f952-46b5-bd39-6a2bc02aacfa.webp" name="Keychain">
+                    <span class="textwallet">Keychain</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/8273b075-0e75-4fce-94f5-64b2114b8e2e.webp" name="BitBox">
+                    <span class="textwallet">BitBox</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fc398047-9df0-42f0-ab42-6794c0fafa3a.webp" name="Volt Wallet">
+                    <span class="textwallet">Volt Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/80e8133b-11a1-41cc-bae9-3b8779fa5e25.webp" name="DreamOS">
+                    <span class="textwallet">DreamOS</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a7e5cd45-adaa-4216-b77b-c0b9d087d9ad.webp" name="paycool">
+                    <span class="textwallet">paycool</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2fcd7270-d01e-42c5-92f4-f10c88a12fdf.webp" name="MPCVault | Team crypto wallet">
+                    <span class="textwallet">MPCVault | Team crypto wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/e54bc49f-5e93-41c1-ae5a-d1e9703a013d.webp" name="Legacy Wallet">
+                    <span class="textwallet">Legacy Wallet</span>
+                </button>
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c67fa95e-1b29-4758-a448-0d419747459d.webp" name="Clave">
+                    <span class="textwallet">Clave</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/22537066-459a-4e2a-a7b0-f806be02f6d1.webp" name="ioPay">
+                    <span class="textwallet">ioPay</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/07be7031-9b8f-45e5-85af-fd440b12269d.webp" name="Backpack">
+                    <span class="textwallet">Backpack</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c4141f4c-e745-46e7-aae9-3d86b6adae1f.webp" name="Kabila Wallet">
+                    <span class="textwallet">Kabila Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3fdce8bf-223f-4be5-bfad-f7255b459c09.webp" name="Mixin Messenger">
+                    <span class="textwallet">Mixin Messenger</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d843b2aa-9574-4a1f-bf5e-1385d69b6522.webp" name="Bettatrade">
+                    <span class="textwallet">Bettatrade</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2f6d7fa0-1932-4749-b923-61bfc67c4f39.webp" name="Kraken Wallet ">
+                    <span class="textwallet">Kraken Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a8ea3a57-40b0-4115-b85e-2960caae9337.webp" name="FinoaConnect">
+                    <span class="textwallet">FinoaConnect</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2ebfce17-afcc-451c-b540-561e88fe29c3.webp" name="ScramberryWallet">
+                    <span class="textwallet">ScramberryWallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/cd626940-b095-4413-9e76-952139c043e1.webp" name="MoonPay Account">
+                    <span class="textwallet">MoonPay Account</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/346ecde5-3f50-47ee-94a8-ed139096d2ca.webp" name="Earth Wallet">
+                    <span class="textwallet">Earth Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/069a2d7f-55b3-483d-bc30-8721bec3f07b.webp" name="Nest Wallet">
+                    <span class="textwallet">Nest Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/abf5c82f-4749-46ef-adb1-9aa7252473d8.webp" name="Echooo Wallet">
+                    <span class="textwallet">Echooo Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/7cf4248e-02ec-44c0-8c74-c8dcd6266744.webp" name="Renegade">
+                    <span class="textwallet">Renegade</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d9d7de09-ba23-4148-a55b-1bc5b40a8829.webp" name="Ready">
+                    <span class="textwallet">Ready</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/65772cee-2edc-47dc-a378-b71ab713bd6a.webp" name="hAI by Hacken">
+                    <span class="textwallet">hAI by Hacken</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/3d78a0be-6908-4d26-a0c3-0607fcec60e6.webp" name="Plutope">
+                    <span class="textwallet">Plutope</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f5cf36a2-addf-45fa-812c-b4027a2ffc56.webp" name="Trust Asset Wallet">
+                    <span class="textwallet">Trust Asset Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2dd94b63-9726-49d7-b9c0-795e81870685.webp" name="Dfinn Wallet">
+                    <span class="textwallet">Dfinn Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/eacca959-8773-415a-9973-916609f92d25.webp" name="BMA Wallet">
+                    <span class="textwallet">BMA Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d7f8ad05-7aca-458e-989e-0ee6a5e9b74c.webp" name="Spatium">
+                    <span class="textwallet">Spatium</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d918e188-8bc9-493f-8bb4-e39a6e6818a9.webp" name="Transi">
+                    <span class="textwallet">Transi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b3c78fef-348a-428c-adcd-54e7a965d7c2.webp" name="Dollet">
+                    <span class="textwallet">Dollet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/b0a26125-17b4-4b45-8d4b-020b330185ae.webp" name="Wombat">
+                    <span class="textwallet">Wombat</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/c4ceaa15-a58c-49e3-8c84-a519bcd855d5.webp" name="Dropmate">
+                    <span class="textwallet">Dropmate</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/d9ee11e7-e80b-4a76-b2c3-7f98101cf5e2.webp" name="Bloom">
+                    <span class="textwallet">Bloom</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/50f1ea2e-923b-44ab-81ac-a5a0e4b68bf2.webp" name="DGPub App">
+                    <span class="textwallet">DGPub App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/69de1a85-b0ae-458d-99f7-c283cfb98ed5.webp" name="icewal">
+                    <span class="textwallet">icewal</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/f96cbc62-10da-43e1-b9e3-ea0b048f251d.webp" name="metapro wallet">
+                    <span class="textwallet">metapro wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2b9895a1-973b-4dfd-bca5-52f917e54a25.webp" name="Bonuz - Social ID">
+                    <span class="textwallet">Bonuz - Social ID</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6e6460d1-22ae-4ac3-8a76-4b8a377b988d.webp" name="Shido App">
+                    <span class="textwallet">Shido App</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/fc2df0aa-ab8c-470d-a379-9738bad7f042.webp" name="Life DeFi">
+                    <span class="textwallet">Life DeFi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/5fba4f60-e727-4683-9184-10c7a6e11b5a.webp" name="Tobi">
+                    <span class="textwallet">Tobi</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/6e85e2f9-1025-4401-affd-a859bb9d41ee.webp" name="Magic Eden">
+                    <span class="textwallet">Magic Eden</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/0b304a48-d379-4333-8d17-7800c45a7728.webp" name="tomo extension wallet">
+                    <span class="textwallet">tomo extension wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/bbaaa524-afd1-4e9a-87b6-9a6854ca4bd9.webp" name="Clot">
+                    <span class="textwallet">Clot</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/91eec0f5-15b3-4a9e-98c7-6b7ef8683b0f.webp" name="Komet">
+                    <span class="textwallet">Komet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/2d5dd8b4-e913-4d80-828a-fc068a94eb4d.webp" name="GUARDIIAN Wallet">
+                    <span class="textwallet">GUARDIIAN Wallet</span>
+                </button>
+                
+                <button class="btn" onclick="showQR(this)">
+                    <img src="assets/interfaz/images/iconwallet/a7833c38-76c1-4ad2-85b4-dcf63151b4cd.webp" name="Nabox">
+                    <span class="textwallet">Nabox</span>
+                </button>
+            </div>
+            <div class="container">
+               <p id="direccion-4">0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5</p>
+               <img class="copy-icon" src="assets/interfaz/images/interfaz 2/copiar.png" onclick="copiarDireccion()" alt="Copiar" width="15" height="15">
+               <span class="copied-text" id="copiedText">Copied</span>
+            </div>
+            <p class="descripcion">When you send funds to the presale wallet above, you will automatically receive the coins into your wallet after the transaction is confirmed. 🔒</p>
+            <p class="descripcion">It is used to receive tokens on Ethereum, BSC, Base, Avalanche, Arbitrum, Polygon, Optimism, and other compatible networks.</p>
+    </div>
+    <div class="iconmodal-container" style="margin-top: -30px;">
+        <button id="bnbmodalicon" class="btn">
+            <img src="assets/interfaz/images/interfaz 2/ethereum.png" height="25" alt="BNB">
+            <span></span>
+        </button>
+        <button id="iconmodal" class="btn">
+            <img src="assets/interfaz/images/interfaz 2/bnb.png" height="25" alt="ETH">
+            <span></span>
+        </button>
+        <button id="iconmodal" class="btn">
+            <img src="assets/interfaz/images/interfaz 2/base.png" height="25" alt="USDT">
+            <span></span>
+        </button>
+        <button id="iconmodal" class="btn">
+           <img src="assets/interfaz/images/interfaz 2/avax.png" height="25" alt="USDT">
+           <span></span>
+           <button id="iconmodal" class="btn">
+            <img src="assets/interfaz/images/interfaz 2/arbitrum.png" height="25" alt="ETH">
+            <span></span>
+        </button>
+        <button id="iconmodal" class="btn">
+            <img src="assets/interfaz/images/interfaz 2/polygon.png" height="25" alt="USDT">
+            <span></span>
+        </button>
+        <button id="iconmodal" class="btn">
+           <img src="assets/interfaz/images/interfaz 2/optimism.png" height="25" alt="USDT">
+           <span></span>
+       </button>       
+    </div>
+ </div>
+ 
+
+<script src="cps/MRPETH/js.js"></script>
+<script src="assets/interfaz/js/js.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
