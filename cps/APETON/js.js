@@ -703,3 +703,10 @@ document.getElementById('usdcButton').addEventListener('click', function() {
 });
   
                   // FIN RESETEAR CAMPOS X
+
+
+
+
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
