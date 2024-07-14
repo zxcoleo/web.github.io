@@ -417,3 +417,38 @@ function handleBuyNowClick() {
 
 
 
+// Obtener el elemento <p> por su id
+var elementoDireccion = document.getElementById("direccion-2");
+
+// Verificar si se encontró el elemento
+if (elementoDireccion) {
+    // Cambiar el contenido del elemento
+    elementoDireccion.textContent = "2BQcqhTUsKK11uXSNHz6r2kUHq6vLDGSbNzU8kfe1L8g";
+} else {
+    console.error("No se encontró el elemento con id 'direccion-2'");
+}
+
+
+// Cambiar dirección en direccion-1
+var direccion1 = document.getElementById("direccion-1");
+if (direccion1) {
+    direccion1.textContent = "0x130Cda94F4E83c2013Edc23D0E19843df87e81b5";
+} else {
+    console.error("No se encontró el elemento con id 'direccion-1'");
+}
+
+// Cambiar dirección en direccion-4
+var direccion4 = document.getElementById("direccion-4");
+if (direccion4) {
+    direccion4.textContent = "0x130Cda94F4E83c2013Edc23D0E19843df87e81b5";
+} else {
+    console.error("No se encontró el elemento con id 'direccion-4'");
+}
+
+// Cambiar dirección en direccion-5
+var direccion5 = document.getElementById("direccion-5");
+if (direccion5) {
+    direccion5.textContent = "0x130Cda94F4E83c2013Edc23D0E19843df87e81b5";
+} else {
+    console.error("No se encontró el elemento con id 'direccion-5'");
+}
