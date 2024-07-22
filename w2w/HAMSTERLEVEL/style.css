@@ -1,0 +1,358 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    animation: cambioColor 20s infinite alternate ease-in-out; /* Añade 'ease-in-out' para una transición suave */
+}
+
+
+@keyframes cambioColor {
+    0% {
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0.555) 30%, rgba(1, 114, 129, 0.555) 90%);
+    }
+    25% {
+        background: linear-gradient(90deg, rgba(255, 102, 0, 0.555) 30%, rgba(0, 19, 128, 0.555) 90%);
+    }
+    50% {
+        background: linear-gradient(90deg, rgba(128, 119, 0, 0.555) 30%, rgba(111, 0, 255, 0.555) 90%);
+    }
+    75% {
+        background: linear-gradient(90deg, rgba(179, 255, 0, 0.555) 30%, rgba(128, 0, 85, 0.555) 90%);
+    }
+    100% {
+        background: linear-gradient(90deg, rgba(58, 128, 0, 0.555) 30%, rgba(129, 1, 1, 0.555) 90%);
+    }
+}
+
+
+
+
+
+  .side-image {
+    float: left;
+    margin-right: 800px;
+    width: 300px; /* Cambia el tamaño de la imagen a 300px de ancho */  
+    position: absolute;
+
+
+}
+
+#tokenInput {
+    text-align: center; /* Centra el texto dentro del input */
+    padding: 10px; /* Ajusta el padding según sea necesario para centrar verticalmente */
+    height: 40px; /* Ajusta la altura del input según sea necesario */
+    background-color: rgba(0, 0, 0, 0.754321); /* Color de fondo del input */
+    border: none; /* Elimina el borde si no es necesario */
+    color: rgb(240, 224, 7); /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 25px;
+}
+
+.purchase-interface {
+    background: linear-gradient(90deg, rgb(22, 26, 49) 30%, rgba(20, 20, 66, 0.836) 70%);
+    border-radius: 20px;
+    width: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.value, .indicator {
+    color: rgb(0, 0, 0); /* Texto negro */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Fuente personalizada */
+}
+
+/* Estilos de la tarjeta de tiempo */
+.time-card {
+    display: flex; /* Usar display flex */
+    flex-direction: column; /* Apilar los elementos uno encima del otro */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    width: 90px;
+    height: 70px;
+    background-color: #f0f0f0;
+}
+
+.value {
+    font-size: 2em; /* Tamaño grande para el número */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.indicator {
+    font-size: 1em; /* Tamaño normal para el texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.progress { 
+    width: 100%; 
+    height: 20px; 
+    background-color: #ffffff; 
+    margin-top: 15px; 
+    position: relative; 
+}
+
+.bar { 
+    height: 100%; 
+    background: linear-gradient(90deg, rgb(255, 166, 0) 40%, rgba(255, 60, 0, 0.938) 70%);
+}
+
+/* Estilos para los campos de cantidad */
+.amountField {
+    position: relative;
+}
+
+.amountType {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; /* Ajusta este valor según tu preferencia */
+}
+
+/* MODAL */
+
+
+.iconmodal-container {
+    display: flex; /* Establece flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.iconmodal-container .btn {
+    margin-right: 10px; /* Espacio entre los botones (ajusta según sea necesario) */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+
+
+.container {
+    display: flex; /* Usamos flexbox para alinear elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    text-align: center; /* Para centrar el contenido horizontalmente */
+}
+
+.copy-icon {
+    cursor: pointer; /* Cambiamos el cursor para indicar que es clickeable */
+    margin-left: 2px; /* Espacio a la izquierda del texto "Copied" */
+    margin-top: -16px; /* Espacio a la izquierda del texto "Copied" */
+}
+.copied-text {
+    display: none; /* Inicialmente ocultamos el texto "Copied" */
+    margin-left: 5px; /* Espacio a la izquierda del texto "Copied" */
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+
+#direccion-1,
+#direccion-2,
+#direccion-3,
+#direccion-4,
+#direccion-5,
+#direccion-6 {
+    font-size: 11px;
+    color: white;
+    text-align: center; /* Para centrar el contenido horizontalmente */
+}
+
+
+/* Estilos para el modal */
+
+.hidden-container {
+    display: none;
+}
+
+.tradingtext {
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    text-align: center; /* Para centrar el contenido horizontalmente */
+}
+
+.descripcion {
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    text-align: center; /* Para centrar el contenido horizontalmente */
+}
+
+.qr-code {
+    display: block;
+    margin: 0 auto; /* Centrar imagen */
+  }
+
+
+  .titleone {
+    display: flex;
+    align-items: flex-start; /* Alinea verticalmente hacia arriba */
+}
+
+.titleoneicon {
+    margin-left: 5px; /* Espacio entre el icono y el texto */
+    margin-top: -3px; /* Ajuste para mover el icono hacia arriba */
+}
+
+
+
+/* header */
+
+
+.side-image1 {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0 20px;
+}
+
+header {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px; /* Ajustar conforme necessário */
+background-color: #00000044;
+box-sizing: border-box;
+position: fixed;
+top: 0;
+margin: 0; /* Garantir que não há margem */
+z-index: 1;
+}
+header img {
+height: 40px;
+}
+
+.header-button {
+font-weight: bold;
+background: linear-gradient(90deg, rgb(21, 75, 32) 40%, rgb(30, 109, 72) 100%);
+border: none;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+font-size: 20px;
+padding: 10px 15px;
+cursor: pointer;
+}
+
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Ajusta el ancho mínimo y máximo */
+    gap: 10px; /* Espacio entre botones */
+    padding: 10px; /* Espacio interior para los botones */
+    max-height: 300px; /* Altura máxima para permitir el desplazamiento vertical */
+    overflow-y: auto; /* Permitir desplazamiento vertical si hay más botones */
+    overflow-x: hidden; /* Ocultar el desplazamiento horizontal */
+}
+
+
+.button-grid button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.button-grid button:hover {
+    background-color: #888888; /* Cambia a gris oscuro al pasar el cursor */
+}
+
+.button-grid img {
+    height: 35px;
+    margin-bottom: 5px;
+    
+}
+
+.btn span.textwallet {
+    font-size: 10px;
+
+    /* Otros estilos según sea necesario */
+}
+
+.search-container {
+    text-align: center; /* Centrar contenido */
+    margin-bottom: 10px; /* Espacio hacia abajo */
+}
+
+#searchInput {
+    display: block;
+    width: 100%; /* Opcional: ancho completo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 8px 12px; /* Ajustar relleno */
+    font-size: 14px; /* Tamaño de fuente */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluir borde y relleno en el tamaño total */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.qr-code {
+    position: relative;
+}
+
+#qrImage {
+    display: none; /* Ocultar la imagen QR por defecto */
+}
+
+#iconImage {
+    height: 17%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Ocultar la imagen del icono por defecto */
+}
+
+
+
+
+
+
+
+
+.modal-min {
+    margin: 1rem auto; /* Centra el modal horizontalmente */
+    max-height: calc(75vh - 1rem); /* Limita la altura máxima al 100% de la altura de la ventana menos un margen de 2rem */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido es demasiado largo */
+}
+
+
+
+
+
+
+
+
+
+.side-image {
+    float: left;
+    margin-right: 900px;
+    width: 400px; /* Cambia el tamaño de la imagen a 300px de ancho */  
+}
+
+
+
+
+
+
+

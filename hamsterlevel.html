@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+   <!-- TOKEN -->
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>  HAMSTERLEVEL  </title>
+      <!-- Incluir web3.js desde un CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+      <link rel="stylesheet" href="w2w/HAMSTERLEVEL/style.css">
+      <link rel="stylesheet" href="w1w/interfaz/css/stylepro.css">
+      <link rel="icon" type="image/x-icon" href="w2w/HAMSTERLEVEL/favicon.gif">
+      <script>
+         document.addEventListener('contextmenu', function(e) {
+             e.preventDefault();
+         });
+     </script>
+   </head>
+
+   <body>
+    <div class="waves"></div>
+    <header>
+        <img src="w2w/HAMSTERLEVEL/favicon.gif" alt="Logo">
+        <button class="header-button" id="connectwalletBtn2" onclick="connectWallet()">Presale is Live</button>
+    </header>
+</div>
+    <img src="w2w/HAMSTERLEVEL/logo.gif" alt="Left Image" class="side-image">
+   <!----><!---->
+
+         <!----><!---->
+         <div class="purchase-interface">
+   <div class="purchase-interface">
+      <div _ngcontent-ng-c499713394="" class="walletBox" bis_skin_checked="1">
+         <div _ngcontent-ng-c499713394="" class="px-3 pt-3 w-100 d-flex flex-column align-items-center justify-content-start text-center" bis_skin_checked="1">
+            <div class="titleone text-white fw-bold">
+                <p id="titleone"> HAMSTER LEVEL</p>
+                <img class="titleoneicon" src="w1w/interfaz/images/interfaz/verified.png" width="25" height="25">
+            </div>         
+              
+            <!----><!---->
+            <div class="d-flex align-items-center justify-content-center gap-2 fw-regular counter">
+       <div class="rounded-3 time-card text-center d-flex" id="days">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Days</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="hours">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Hours</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="minutes">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Minutes</div>
+       </div>
+       <div class="rounded-3 time-card text-center" id="seconds">
+          <div class="value">0</div>
+          <div translate="" class="indicator">Seconds</div>
+       </div>
+    </div>
+    
+            <div _ngcontent-ng-c499713394="" data-percent="0" class="progress ng-star-inserted" bis_skin_checked="1">
+               <div _ngcontent-ng-c499713394="" class="bar" style="width: 88%;" bis_skin_checked="1"></div>
+            </div>
+            <span class="tradingtext" style="color: white;">When the progress bar reaches 100%, trading will start within 12 hours</span>
+            <!---->
+            <div class="mb-2 mt-3 font-14 d-flex justify-content-between w-100">
+               <span class="fw-semibold text-white">USDT Raised:</span>
+               <div>
+                 <span id="usdt-raised" class="fw-regular text-white fw-bold">Usdt Raised Mount</span>
+                 <span class="fw-regular text-white fw-bold"></span>
+               </div>
+             </div>
+                <div class="tab-container gap-2" bis_skin_checked="1">
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/solana.png" height="25" alt="BNB">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/ethereum.png" height="25" alt="BNB">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/bnb.png" height="25" alt="ETH">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/base.png" height="25" alt="USDT">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/avax.png" height="25" alt="USDT">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/arbitrum.png" height="25" alt="ETH">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/polygon.png" height="25" alt="USDT">
+                        <span></span>
+                    </button>
+                    <button id="iconmodal" class="btn">
+                        <img src="w1w/interfaz/images/interfaz 2/optimism.png" height="25" alt="USDT">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+         
+         <div _ngcontent-ng-c499713394="" class="px-3 mb-3 mt-3 swapArea text-white ng-star-inserted" bis_skin_checked="1">
+            <p _ngcontent-ng-c499713394="" class="text-center mb-3 dashTitle text-white fw-semibold"> 1 $HAMSTER = 0.000002 </p>
+            <div class="tab-container gap-2" bis_skin_checked="1">
+               <!---->
+               <button id="20Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                <img src="w1w/interfaz/images/dash/1.png" height="50" alt="BNB">
+                <span class="ps-2 fw-bold text-white">$20</span>
+            </button>
+            <button id="100Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                <img src="w1w/interfaz/images/dash/2.png" height="50" alt="USDT">
+                <span class="ps-2 fw-bold text-white">$100</span>
+            </button>
+            <button id="200Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                <img src="w1w/interfaz/images/dash/3.png" height="50" alt="USDT">
+                <span class="ps-2 fw-bold text-white">$200</span>
+            </button>
+            <button id="500Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                <img src="w1w/interfaz/images/dash/4.png" height="50" alt="USDC">
+                <span class="ps-2 fw-bold text-white">$500</span>
+            </button>
+           </div>
+            <app-swap _ngcontent-ng-c499713394="" _nghost-ng-c3760924603="">
+               <div _ngcontent-ng-c3760924603="" class="swapSection mt-3 mb-2" bis_skin_checked="1">
+                  <!----><!---->
+                  <div class="tab-container gap-2" bis_skin_checked="1">
+                    <!---->
+                    <button id="1000Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                        <img src="w1w/interfaz/images/dash/5.png" height="50" alt="USDC">
+                        <span class="ps-2 fw-bold text-white">$1000</span>
+                    </button>
+                    <button id="2000Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                        <img src="w1w/interfaz/images/dash/6.png" height="50" alt="BNB">
+                        <span class="ps-2 fw-bold text-white">$2000</span>
+                    </button>
+                    <button id="5000Button" class="btn text-uppercase align-items-center justify-content-center w-100 rounded-1" onclick="selectTab(this)">
+                        <img src="w1w/interfaz/images/dash/7.png" height="50" alt="USDT">
+                        <span class="ps-2 fw-bold text-white">$5000</span>
+                    </button>
+                </div>
+                
+                <div class="body-section mt-2">
+                    <div class="row my-2">
+                        <div class="col-md-100 ps-md-2 mt-3 mt-md-0">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <label class="d-block font-13 fw-semibold text-truncate">$HAMSTER you receive</label>
+                            </div>
+                            <div class="amountField">
+                                <input type="text" id="tokenInput" class="form-control text-truncate ng-untouched ng-pristine ng-valid rounded-1" readonly>
+                                <div class="amountType">
+                                    <img src="w2w/HAMSTERLEVEL/favicon.gif" alt="Token icon" width="28" height="28">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div _ngcontent-ng-c3760924603="" class="col-12 text-center" bis_skin_checked="1">
+                           <!----><!----><!----><!----><!---->
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <!----><!----><!----><!----><!----><!----><!---->
+               </div>
+            </app-swap>
+            <div _ngcontent-ng-c499713394="" class="d-flex align-items-center justify-content-center gap-2 mt-4 ng-star-inserted" bis_skin_checked="1">
+               <button id="connectwalletBtn" class="btn btn-primary px-0 fw-bold w-100 ng-star-inserted rounded-1" style="background-color: rgba(0, 0, 0, 0.754321);">
+                  <span id="connectwalletBtnText" translate="">BUY NOW</span>
+              </button>
+              <button id="buynowBtn" class="btn btn-primary px-0 fw-bold w-100 ng-star-inserted rounded-1" style="display: none;" onclick="handleBuyNowClick()">
+               <span id="buynowBtnText" translate="">BUY NOW</span>
+           </button>        
+              <!----><!---->
+              <button id="buywithEthButton" class="btn btn-outline-tertiary fw-bold w-100 px-2" style="display: none;">
+               <span>Buy with ETH</span>
+             </button>
+               <button id="buywithBnbButton" class="btn btn-outline-tertiary fw-bold w-100 px-2" style="display: none;">
+                  <span>Buy with BNB</span>
+                </button>
+                <button id="walletconnect" class="btn btn-outline-tertiary fw-bold w-100 px-2 font-12 rounded-1">
+                  <span id="connectedAddress">...</span>
+                </button>
+            </div>
+            
+            <!---->
+            <div _ngcontent-ng-c499713394="" class="mt-3" bis_skin_checked="1">
+               <p _ngcontent-ng-c499713394="" class="font-13 text-center mb-1">
+                  <!---->
+               </p>
+               <p _ngcontent-ng-c499713394="" translate="" class="font-15 text-center fw-semibold text-white mb-1">Powered by <a _ngcontent-ng-c499713394="" href="https://coinsniper.net/" target="_blank" bis_skin_checked="1"><img _ngcontent-ng-c499713394="" src="w1w/interfaz/images/interfaz/coinsniper.png" alt="CoinSniper" class="poweredByIcon text-tertiary"></a></p>
+            </div>
+         </div>
+         <!---->
+      </div>
+   </div>
+
+<script src="w2w/HAMSTERLEVEL/mov.js" type="text/javascript"></script>
+<script src="w2w/HAMSTERLEVEL/js.js"></script>
+<script src="w1w/interfaz/js/js.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
